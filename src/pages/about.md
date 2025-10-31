@@ -1,13 +1,11 @@
 ---
-title: About
+title: Luke O'Regan
 description: Full-Stack Developer & Digital Strategist
-date: '2024-01-01'
-categories:
-  - about
+date: '2025-11-01'
 published: true
 ---
 
-## Luke O'Regan - Developer – Digital Strategist
+## Developer – Digital Strategist
 
 ### About Me
 
