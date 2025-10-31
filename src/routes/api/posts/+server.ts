@@ -13,7 +13,10 @@ async function getPosts() {
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>
 			const post = { ...metadata, slug } satisfies Post
-			post.published && posts.push(post)
+			// Exclude 'about' from posts list
+			if (post.published && slug !== 'about') {
+				posts.push(post)
+			}
 		}
 	}
 
