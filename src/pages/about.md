@@ -1,5 +1,5 @@
 ---
-title: Luke O'Regan
+title: About
 description: Full-Stack Developer & Digital Strategist
 date: '2025-11-01'
 published: true
@@ -48,11 +48,23 @@ _Sep 2006 - Jun 2010_
 
 #### Languages
 
-HTML, CSS, JavaScript, PHP, Sass, Svelte, GraphQL, MySQL, Git, Bash, Zsh
+HTML, CSS, JavaScript, TypeScript, PHP, SASS, Svelte, GraphQL, MySQL, Git, Bash, Zsh
 
 #### Tools
 
-WordPress, Node.js, Apache, npm, Composer, CodeIgniter, Laravel, AWS, Linux, Raspberry Pi, Ubuntu, Illustrator, Photoshop, XD, Premiere Pro, After Effects, VS Code
+WordPress, Node, Apache, npm, Composer, CodeIgniter, Laravel, AWS, Linux, Raspberry Pi, Ubuntu, Illustrator, Photoshop, XD, Premiere Pro, After Effects, VS Code
+
+#### What I Use
+Just a few links to a few tools I use to speed up my development work.
+
+- <a rel="noopener noreferrer" target="_blank" href="https://raycast.com/?via=luke-o-regan">Raycast</a> – A collection of powerful productivity tools
+- <a rel="noopener noreferrer" target="_blank" href="https://nodejs.org/">Node.js</a> – for running command line tools and scripts  
+- <a rel="noopener noreferrer" target="_blank" href="https://www.adobe.com/">Adobe</a> – For anything creative, designing, video editing, animations.  
+- <a rel="noopener noreferrer" target="_blank" href="https://mjml.io/">MJML</a> – Quickly create responsive HTML emails that work. Even on Outlook  
+- <a rel="noopener noreferrer" target="_blank" href="https://wordpress.org/">WordPress</a> – The open source publishing platform of choice  
+- <a rel="noopener noreferrer" target="_blank" href="https://dbeaver.io/">DBeaver</a> – Database tool for developers and everyone working with data  
+- <a rel="noopener noreferrer" target="_blank" href="https://mxtoolbox.com/">MX Toolbox</a> – All of your MX record, DNS, blacklist and SMTP diagnostics in one integrated tool
+- <a rel="noopener noreferrer" target="_blank" href="https://svelte.dev/">Svelte</a> – A compiler for Svelte
 
 ---
 

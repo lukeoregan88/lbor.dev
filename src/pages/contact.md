@@ -1,9 +1,7 @@
 ---
 title: Contact
-description: Get in touch
-date: '2024-01-01'
-categories:
-  - contact
+description: Get in touch with Luke O'Regan
+date: '2025-11-01'
 published: true
 ---
 
@@ -13,7 +11,7 @@ Feel free to get in touch with me if you have any questions, would like to work 
 
 - **Email**: <a href="mailto:hello@lbor.dev">hello@lbor.dev</a>
 - **LinkedIn**: <a href="https://www.linkedin.com/in/lukeoregan/" target="_blank" rel="noopener noreferrer">lukeoregan</a>
-- **Website**: <a href="https://www.lbor.dev" target="_blank" rel="noopener noreferrer">www.lbor.dev</a>
+- **Website**: <a href="https://www.lbor.dev" target="_blank" rel="noopener noreferrer">lbor.dev</a>
 
 ---
 

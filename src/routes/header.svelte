@@ -5,6 +5,7 @@
 
 <nav>
 	<a href="/" class="title">
+		<img src="/logo.svg" alt="Logo" class="logo"  />
 		<b>{config.title}</b>
 	</a>
 
@@ -15,8 +16,8 @@
 		<li>
 			<a href="/contact">Contact</a>
 		</li>
-		<li>
-			<a href="/rss.xml" target="_blank">RSS</a>
+    <li>
+			<a href="/projects">Projects</a>
 		</li>
 	</ul>
 
@@ -46,5 +47,17 @@
 			color: inherit;
 			text-decoration: none;
 		}
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: var(--size-2);
+
+      .logo {
+        width: 15px;
+        height: 15px;
+        border-radius: 0;
+      }
+    }
 	}
 </style>
