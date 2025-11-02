@@ -1,12 +1,33 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils'
-	import * as config from '$lib/config'
+	import { getSEOTags } from '$lib/seo'
 
 	let { data } = $props()
+
+	const seo = $derived(getSEOTags())
 </script>
 
 <svelte:head>
-	<title>{config.title}</title>
+	<title>{seo.title}</title>
+	<meta name="description" content={seo.description} />
+	<meta name="robots" content={seo.robots} />
+	<meta name="author" content={seo.author} />
+	
+	<!-- Open Graph -->
+	<meta property="og:type" content={seo.openGraph.type} />
+	<meta property="og:url" content={seo.openGraph.url} />
+	<meta property="og:title" content={seo.openGraph.title} />
+	<meta property="og:description" content={seo.openGraph.description} />
+	<meta property="og:image" content={seo.openGraph.image} />
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content={seo.twitter.card} />
+	<meta name="twitter:title" content={seo.twitter.title} />
+	<meta name="twitter:description" content={seo.twitter.description} />
+	<meta name="twitter:image" content={seo.twitter.image} />
+	
+	<!-- Canonical -->
+	<link rel="canonical" href={seo.canonicalUrl} />
 </svelte:head>
 
 <section>

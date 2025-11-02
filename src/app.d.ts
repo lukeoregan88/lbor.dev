@@ -9,4 +9,11 @@ declare global {
 	}
 }
 
+declare module '*.md' {
+	import type { ComponentType } from 'svelte'
+	const Component: ComponentType<Record<string, never>>
+	export const metadata: Record<string, any>
+	export default Component
+}
+
 export {}
