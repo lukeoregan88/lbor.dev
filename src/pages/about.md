@@ -1,11 +1,11 @@
 ---
 title: About
-description: Full-Stack Developer & Digital Strategist
+description: Full-Stack Developer & Creative Technologist
 date: '2025-11-01'
 published: true
 ---
 
-## Developer – Digital Strategist
+## Developer – Creative Technologist
 
 ### About Me
 
