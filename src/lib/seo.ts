@@ -76,7 +76,7 @@ export function getSEOFromMetadata(metadata: {
 	[key: string]: unknown
 }, urlPath = ''): SEOProps {
 	const props: SEOProps = {
-		url: urlPath || (metadata.slug ? `/${metadata.slug}` : ''),
+		url: urlPath || (metadata.slug ? `/${metadata.slug}/` : ''),
 		type: metadata.categories ? 'article' : 'website',
 		tags: metadata.categories || []
 	}

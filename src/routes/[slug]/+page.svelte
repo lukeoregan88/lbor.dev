@@ -8,7 +8,7 @@
 		getSEOTags(
 			getSEOFromMetadata(
 				{ ...data.meta, slug: data.slug },
-				`/${data.slug}`
+				`/${data.slug}/`
 			)
 		)
 	)

@@ -5,7 +5,7 @@
 
 	const seo = $derived(
 		getSEOTags(
-			getSEOFromMetadata(data.meta, '/contact')
+			getSEOFromMetadata(data.meta, '/contact/')
 		)
 	)
 </script>
