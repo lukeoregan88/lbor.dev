@@ -21,7 +21,7 @@ export interface SEOProps {
 export function getSEOTags({
 	title = config.title,
 	description = config.description,
-	image = `${config.url}/favicon.png`,
+	image = `${config.url}/og-image.png`,
 	url = '',
 	type = 'website',
 	publishedTime,
@@ -30,7 +30,7 @@ export function getSEOTags({
 	tags = [],
 	noindex = false
 }: SEOProps = {}) {
-	const canonicalUrl = url ? `${config.url}${url}` : config.url
+	const canonicalUrl = url ? `${config.url}${url}` : `${config.url}/`
 	const fullTitle = title === config.title ? title : `${title} | ${config.title}`
 
 	return {

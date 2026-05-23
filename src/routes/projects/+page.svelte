@@ -1,37 +1,21 @@
 <script lang="ts">
-	import { getSEOTags, getSEOFromMetadata } from '$lib/seo'
+	import { getSEOFromMetadata } from '$lib/seo'
+	import SeoHead from '$lib/components/SeoHead.svelte'
+	import PageLinks from '$lib/components/PageLinks.svelte'
+	import { getBreadcrumbSchema } from '$lib/schema'
 
 	let { data } = $props()
 
-	const seo = $derived(
-		getSEOTags(
-			getSEOFromMetadata(data.meta, '/projects/')
-		)
-	)
+	const seoProps = $derived(getSEOFromMetadata(data.meta, '/projects/'))
+	const jsonLd = $derived([
+		getBreadcrumbSchema([
+			{ name: 'Home', path: '/' },
+			{ name: data.meta.title, path: '/projects/' }
+		])
+	])
 </script>
 
-<svelte:head>
-	<title>{seo.title}</title>
-	<meta name="description" content={seo.description} />
-	<meta name="robots" content={seo.robots} />
-	<meta name="author" content={seo.author} />
-	
-	<!-- Open Graph -->
-	<meta property="og:type" content={seo.openGraph.type} />
-	<meta property="og:url" content={seo.openGraph.url} />
-	<meta property="og:title" content={seo.openGraph.title} />
-	<meta property="og:description" content={seo.openGraph.description} />
-	<meta property="og:image" content={seo.openGraph.image} />
-	
-	<!-- Twitter -->
-	<meta name="twitter:card" content={seo.twitter.card} />
-	<meta name="twitter:title" content={seo.twitter.title} />
-	<meta name="twitter:description" content={seo.twitter.description} />
-	<meta name="twitter:image" content={seo.twitter.image} />
-	
-	<!-- Canonical -->
-	<link rel="canonical" href={seo.canonicalUrl} />
-</svelte:head>
+<SeoHead {...seoProps} jsonLd={jsonLd} />
 
 <article>
 	<hgroup>
@@ -41,6 +25,8 @@
 	<div class="prose">
 		<data.content />
 	</div>
+
+	<PageLinks />
 </article>
 
 <style>
@@ -52,7 +38,7 @@
 			text-transform: capitalize;
 		}
 
-		.prose { 
+		.prose {
 			margin-top: var(--size-7);
 		}
 	}

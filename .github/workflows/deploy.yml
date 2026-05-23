@@ -3,28 +3,28 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main  # Change to your main branch name if different
+      - main # Change to your main branch name if different
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: '22'  # Adjust to match your Node version
+          node-version: '22' # Adjust to match your Node version
           cache: 'npm'
-      
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Build project
         run: npm run build
-      
+
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
@@ -32,7 +32,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build/
-          server-dir: /  # Adjust to your server's public directory (e.g., /public_html/)
+          server-dir: /homepage_root/ # Adjust to your server's public directory (e.g., /public_html/)
           exclude: |
             **/.git*
             **/.git*/**

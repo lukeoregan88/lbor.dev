@@ -10,6 +10,6 @@ export async function load() {
 			meta: about.metadata
 		}
 	} catch {
-		error(404, 'Could not find about page')
+		error(404, 'Could not find projects page')
 	}
 }

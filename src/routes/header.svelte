@@ -6,7 +6,7 @@
 <nav>
 	<a href="/" class="title">
 		<img src="/logo.svg" alt="Logo" class="logo"  />
-		<b>{config.title}</b>
+		<b>{config.siteName}</b>
 	</a>
 
 	<ul class="links">
