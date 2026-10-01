@@ -10,17 +10,17 @@ categories:
 published: true
 ---
 
-A custom WordPress importer can be a better fit than a general-purpose plugin when a site has one narrow, stable import workflow—and someone is prepared to maintain the code. A plugin is often the better choice when its flexibility, interface, support and established edge-case handling outweigh the cost of features the site does not need.
+Use a custom importer when the job is narrow and stable, and someone can maintain the code. Choose a plugin when you need its broader feature set, interface, support or built-in handling of edge cases.
 
-That is the trade-off I have increasingly found myself weighing: not “plugins or code?”, but “what is the simplest solution that fits this particular job?”
+I keep coming back to a practical question: which option meets this site's needs with the least complexity?
 
 ## Start with the job to be done
 
-A general-purpose importer is designed to work across different sites, data sources and content models. That breadth can be valuable. For example, WordPress.org lists import plugins that support XML and RSS sources, multiple post types, field mapping and custom fields.[8](#source-8)
+A general-purpose importer has to work across different sites, data sources and content models. That breadth helps when your requirements vary. For example, WordPress.org lists import plugins that support XML and RSS sources, multiple post types, field mapping and custom fields.[8](#source-8)
 
-But some projects have a much narrower requirement: read entries from one known source, map a small set of fields into a particular content type, and keep existing entries up to date. If the workflow is stable and understood, a focused integration may be easier to reason about than a large set of general-purpose settings.
+Some projects need much less: read from one known source, map a few fields to a content type, and update existing entries. If that workflow is stable, a focused integration can be easier to manage than a large set of general-purpose settings.
 
-That does not mean the plugin is poor, or that custom code is automatically faster, cheaper or safer. It means the choice should reflect the real requirements—not a blanket rule to minimise the plugin count.
+That does not make the plugin a poor choice, and custom code is not automatically faster, cheaper or safer. Choose based on the requirements, not a blanket rule to minimise the plugin count.
 
 ## Plugin or custom importer: a comparison
 
@@ -32,7 +32,7 @@ That does not mean the plugin is poor, or that custom code is automatically fast
 | Maintenance         | Updates and support depend on the supplier and licence         | Your team owns tests, security, compatibility and documentation |
 | Cost                | Compare licence, setup and ongoing operation                   | Compare development, monitoring and long-term ownership         |
 
-Neither approach is automatically faster or safer. Test the actual workflow, including failures and repeated runs.
+Neither option is automatically faster or safer. Test the workflow, including failed imports and repeat runs.
 
 ## When a focused importer may make sense
 
@@ -50,7 +50,7 @@ If the source changes frequently, the mapping is managed by non-developers, or t
 
 An automated import may run more than once. If the code cannot recognise an entry it has already processed, repeat runs can create duplicates. A stable ID from the source gives the integration a way to find the corresponding WordPress post and update it instead of inserting another copy.
 
-Here is a deliberately small, fictional example of that persistence step. It accepts a **normalised item** from a parser; it does not fetch or parse a real feed. The example uses synthetic keys, creates new items as drafts for editorial review, and preserves the status of an existing item on later imports. It is an educational pattern, not production-ready importer code.
+This small, fictional example shows only the persistence step. It accepts a **normalised item** from a parser; it does not fetch or parse a feed. It uses synthetic keys, creates new posts as drafts, and keeps an existing post's status on later imports. Treat it as a teaching example, not production code.
 
 ```php
 /**
@@ -116,7 +116,7 @@ function demo_save_imported_item( $item ) {
 
 WordPress’s `wp_insert_post()` creates a post when no ID is supplied and updates the post when an existing ID is supplied; it can return a `WP_Error` when requested.[2](#source-2) The example uses `wp_kses_post()` to filter post content to the HTML allowed in post content.[4](#source-4) When displaying any stored value later, output should still be escaped for its specific context.
 
-The example deliberately leaves out feed retrieval, parser behaviour, scheduling, logging, admin controls and tests. Those are not minor details in a production importer. If an import URL can be configured by a user, use WordPress’s safe HTTP request functions and validate the URL; `wp_safe_remote_get()` validates the URL and redirect targets to help guard against server-side request forgery.[3](#source-3) Also consider what happens when the remote source returns an error, a malformed response, or an item without required fields.
+The example leaves out feed retrieval, parsing, scheduling, logging, admin controls and tests. A production importer needs to handle those too. If users can set the import URL, use WordPress’s safe HTTP request functions. `wp_safe_remote_get()` validates the URL and redirect targets to help guard against server-side request forgery.[3](#source-3) Plan for failed requests, malformed responses and items missing required fields.
 
 ## Scheduling is not the same as guaranteed timing
 
@@ -124,9 +124,9 @@ WordPress’s built-in WP-Cron system checks scheduled work during page loads ra
 
 ## Custom code still has a maintenance bill
 
-A focused importer trades configuration breadth for responsibility. Someone needs to own compatibility checks, tests, error reporting, documentation and changes when the source format or site requirements evolve. The code should live in a place that matches its purpose: if the functionality needs to survive a visual redesign, it generally belongs in a site-specific plugin rather than being coupled to the theme. WordPress’s plugin handbook also recommends keeping small plugins simple and using a clear prefix or namespace for custom code.[7](#source-7)
+A focused importer means your team owns compatibility checks, tests, error reporting and documentation. Someone also needs to update it when the source format or site requirements change. If the importer should survive a redesign, put it in a site-specific plugin rather than the theme. WordPress’s plugin handbook recommends keeping small plugins simple and giving custom code a clear prefix or namespace.[7](#source-7)
 
-Some import plugins already offer admin controls, field mapping and support for multiple XML/RSS formats, post types and custom fields.[8](#source-8) Rebuilding a broad set of features for one narrow workflow can create more work than it removes. Conversely, if a site uses only a small, stable subset of a much broader importer, a focused integration can make the intended behaviour and ownership clearer.
+Some import plugins already offer admin controls and support for multiple formats, post types and custom fields.[8](#source-8) Rebuilding features for one narrow workflow may create more work than it saves. If you use only a small, stable part of a plugin, a focused integration may be easier to maintain.
 
 ## A quick decision checklist
 
@@ -140,9 +140,7 @@ Before replacing an import plugin, ask:
 6. Who will maintain and test the custom code?
 7. Does this functionality need to survive a theme change?
 
-If the answers point to a narrow, durable workflow and an available maintainer, custom code may be a good fit. If the requirement is broad or still changing, a well-supported plugin is often the simpler option.
-
-The aim is not to write more code. It is to choose the least complicated solution that meets the need—and to be honest about who owns it afterwards.
+If the workflow is narrow and stable, and someone can maintain it, custom code may fit. For broader or changing requirements, a well-supported plugin is often simpler. Choose the option that meets the actual need with the least complexity, and make sure someone owns its upkeep.
 
 ## Related reading
 
