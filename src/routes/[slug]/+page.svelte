@@ -8,9 +8,7 @@
 
 	let { data } = $props()
 
-	const seoProps = $derived(
-		getSEOFromMetadata({ ...data.meta, slug: data.slug }, `/${data.slug}/`)
-	)
+	const seoProps = $derived(getSEOFromMetadata({ ...data.meta, slug: data.slug }, `/${data.slug}/`))
 
 	const jsonLd = $derived([
 		getArticleSchema({
@@ -27,9 +25,9 @@
 	])
 </script>
 
-<SeoHead {...seoProps} jsonLd={jsonLd} />
+<SeoHead {...seoProps} {jsonLd} />
 
-<article>
+<article class="page-content">
 	<hgroup>
 		<h1>{data.meta.title}</h1>
 		<p>Published at {formatDate(data.meta.date)}</p>
@@ -51,9 +49,6 @@
 
 <style>
 	article {
-		max-inline-size: var(--size-content-3);
-		margin-inline: auto;
-
 		h1 {
 			text-transform: capitalize;
 		}

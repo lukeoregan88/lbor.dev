@@ -1,11 +1,11 @@
 import * as config from '$lib/config'
-import type { Post } from '$lib/types'
+import { getPosts } from '$lib/posts'
 
 export const prerender = true
 
 const staticPages = [
 	{ path: '/', changefreq: 'weekly', priority: '1.0' },
-	{ path: '/about/', changefreq: 'monthly', priority: '0.8' },
+	{ path: '/writings/', changefreq: 'weekly', priority: '0.9' },
 	{ path: '/contact/', changefreq: 'monthly', priority: '0.8' },
 	{ path: '/projects/', changefreq: 'monthly', priority: '0.8' }
 ]
@@ -31,9 +31,8 @@ function urlEntry(path: string, lastmod?: string, changefreq = 'monthly', priori
 \t</url>`
 }
 
-export async function GET({ fetch }) {
-	const response = await fetch('/api/posts')
-	const posts: Post[] = await response.json()
+export async function GET() {
+	const posts = await getPosts()
 
 	const staticEntries = staticPages.map(({ path, changefreq, priority }) =>
 		urlEntry(path, undefined, changefreq, priority)

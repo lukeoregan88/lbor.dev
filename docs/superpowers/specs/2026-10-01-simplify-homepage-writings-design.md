@@ -1,6 +1,6 @@
 # Homepage and Writings Reorganisation
 
-**Status:** Approved direction; awaiting review of this written scope before implementation.
+**Status:** Implemented and verified. `npm run check`, build, route smoke tests, and `npm audit` pass; full-project lint still reports existing parser/formatting issues.
 **Date:** 2026-10-01
 
 ## Goal
@@ -35,11 +35,12 @@ Make the homepage a concise personal introduction based on Luke's current GitHub
 - `src/routes/+page.svelte` and `src/routes/+page.ts`: replace the homepage feed with the personal introduction and appropriate metadata.
 - `src/routes/writings/+page.svelte` and `src/routes/writings/+page.ts`: add the dedicated article index.
 - `src/routes/header.svelte`: update navigation labels and links.
+- `src/lib/components/PageLinks.svelte`: keep the site's secondary page links aligned with the new routes.
 - `src/routes/about/+page.ts`: redirect the legacy About path to the homepage.
 - `src/lib/config.ts`: update homepage metadata if needed.
 - `src/routes/sitemap.xml/+server.ts`: ensure the Writings page is discoverable and the redirecting About route is not listed as a canonical page.
 
-No article body, article slug, project page, contact page, deployment setup, or remote GitHub state is in scope.
+No article body, article slug, general project-page redesign, contact-page change, deployment setup, or remote GitHub state is in scope. The Projects page gets only one link correction: client inquiries now go directly to Contact rather than through the redirecting About URL.
 
 ## Verification
 

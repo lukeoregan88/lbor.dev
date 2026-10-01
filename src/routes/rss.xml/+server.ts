@@ -1,5 +1,5 @@
 import * as config from '$lib/config'
-import type { Post } from '$lib/types'
+import { getPosts } from '$lib/posts'
 
 export const prerender = true
 
@@ -12,9 +12,8 @@ function escapeXml(value: string) {
 		.replace(/'/g, '&apos;')
 }
 
-export async function GET({ fetch }) {
-	const response = await fetch('/api/posts')
-	const posts: Post[] = await response.json()
+export async function GET() {
+	const posts = await getPosts()
 
 	const headers = { 'Content-Type': 'application/xml' }
 

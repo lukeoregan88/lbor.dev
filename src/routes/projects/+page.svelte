@@ -15,9 +15,9 @@
 	])
 </script>
 
-<SeoHead {...seoProps} jsonLd={jsonLd} />
+<SeoHead {...seoProps} {jsonLd} />
 
-<article>
+<article class="page-content">
 	<hgroup>
 		<h1>{data.meta.title}</h1>
 	</hgroup>
@@ -31,9 +31,6 @@
 
 <style>
 	article {
-		max-inline-size: var(--size-content-3);
-		margin-inline: auto;
-
 		h1 {
 			text-transform: capitalize;
 		}

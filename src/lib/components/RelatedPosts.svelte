@@ -29,7 +29,6 @@
 		max-inline-size: var(--size-content-3);
 
 		h2 {
-			font-size: var(--font-size-2);
 			margin-bottom: var(--size-4);
 		}
 

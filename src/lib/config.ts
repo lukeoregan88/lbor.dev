@@ -1,8 +1,8 @@
 import { dev } from '$app/environment'
 
-export const siteName = 'Luke O\'Regan - LBOR'
-export const title = 'Luke O\'Regan | UK Full-Stack Developer & Digital Strategist'
+export const siteName = "Luke O'Regan - LBOR"
+export const title = "Luke O'Regan | Senior Full-Stack Developer & Digital Strategist"
 export const description =
-	'Full-stack developer and digital strategist in the UK. I write about SvelteKit, WordPress, web performance, hosting, SEO, and practical build notes.'
-export const homepageHeading = 'Luke O\'Regan — UK Full-Stack Developer & Digital Strategist'
+	'Senior full-stack developer and digital strategist in the UK. Building high-performance websites and web applications for over 15 years.'
+export const homepageHeading = "Luke O'Regan"
 export const url = dev ? 'http://localhost:5173' : 'https://lbor.dev'

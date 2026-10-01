@@ -2,6 +2,7 @@
 	import { formatDate } from '$lib/utils'
 	import * as config from '$lib/config'
 	import SeoHead from '$lib/components/SeoHead.svelte'
+	import LocalPresence from '$lib/components/LocalPresence.svelte'
 	import { getPersonSchema, getWebsiteSchema } from '$lib/schema'
 
 	let { data } = $props()
@@ -14,72 +15,89 @@
 	jsonLd={[getWebsiteSchema(), getPersonSchema()]}
 />
 
-<section>
-	<h1 class="heading">{config.homepageHeading}</h1>
+<article class="page-content">
+	<h1>{config.homepageHeading}</h1>
+	<LocalPresence />
 
 	<p class="intro">
-		I write about
-		<a href="/building-a-uk-weather-platform-with-sveltekit/">SvelteKit</a>,
-		<a href="/how-to-disable-html-in-wordpress-comments-without-a-plugin/">WordPress</a>,
-		<a href="/hostinger-review-2026/">hosting and performance</a>,
-		and practical notes on building for the web. Explore my
-		<a href="/projects/">projects</a> or
-		<a href="/about/">learn more about my work</a>.
+		I'm a senior full-stack developer and digital strategist based in the UK. For more than 15
+		years, I've been building high-performance websites and web applications, bringing a background
+		in graphic design together with hands-on development.
 	</p>
 
-	<ul class="posts">
-		{#each data.posts as post}
-			<li class="post">
-				<a href={`/${post.slug}/`} class="title">{post.title}</a>
-				<p class="date">{formatDate(post.date)}</p>
-				<p class="description">{post.description}</p>
-			</li>
-		{/each}
-	</ul>
-</section>
+	<p>
+		I currently work as a Senior Full-Stack &amp; Multimedia Developer at
+		<a href="https://dda.co.uk/">Direct Design Studio</a>, building web applications and CMS-driven
+		websites from design and architecture through to deployment and ongoing optimisation.
+	</p>
+
+	<h2>What I do</h2>
+	<p>
+		My work spans full-stack development, WordPress and other CMS platforms, e-commerce, and SEO and
+		performance optimisation. I care about making websites useful, fast, and straightforward to
+		maintain.
+	</p>
+
+	<section class="latest-writings" aria-labelledby="latest-writings-heading">
+		<h2 id="latest-writings-heading">Latest writings</h2>
+		<ul class="latest-posts">
+			{#each data.posts as post}
+				<li>
+					<a class="title" href={`/${post.slug}/`}>{post.title}</a>
+					<time datetime={post.date}>{formatDate(post.date)}</time>
+				</li>
+			{/each}
+		</ul>
+		<a class="all-writings" href="/writings/">View all writings</a>
+	</section>
+
+	<p>
+		Away from work, I enjoy films, watching sports, exploring, being a nerd, and the occasional lazy
+		Sunday. Browse my <a href="/projects/">projects</a>, read my <a href="/writings/">writings</a>,
+		or
+		<a href="/contact/">get in touch</a>.
+	</p>
+</article>
 
 <style>
-	.heading {
-		font-size: var(--font-size-fluid-2);
-		font-weight: var(--font-weight-6);
-		margin-bottom: var(--size-4);
-		max-inline-size: var(--size-content-3);
-	}
-
-	.intro {
-		margin-bottom: var(--size-8);
-		max-inline-size: var(--size-content-3);
-		color: var(--text-2);
-
-		a {
-			color: inherit;
+	article {
+		h1 {
+			margin-bottom: var(--size-4);
 		}
-	}
 
-	.posts {
-		display: grid;
-		gap: var(--size-7);
+		.intro {
+			font-size: var(--font-size-fluid-1);
+			color: var(--text-2);
+		}
 
-		.post {
-			max-inline-size: var(--size-content-3);
+		h2 {
+			margin-top: var(--size-7);
+		}
 
-			&:not(:last-child) {
-				border-bottom: 1px solid var(--border);
-				padding-bottom: var(--size-7);
+		.latest-posts {
+			display: grid;
+			gap: var(--size-4);
+			margin-top: var(--size-4);
+
+			li {
+				display: grid;
+				gap: var(--size-1);
 			}
 
 			.title {
-				font-size: var(--font-size-fluid-3);
-				text-transform: capitalize;
+				font-size: var(--font-size-1);
+				font-weight: var(--font-weight-6);
 			}
 
-			.date {
+			time {
+				font-size: var(--font-size-0);
 				color: var(--text-2);
 			}
+		}
 
-			.description {
-				margin-top: var(--size-3);
-			}
+		.all-writings {
+			display: inline-block;
+			margin-top: var(--size-5);
 		}
 	}
 </style>

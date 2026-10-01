@@ -14,9 +14,9 @@ export function getPersonSchema() {
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'Person',
-		name: 'Luke O\'Regan',
-		url: absoluteUrl('/about/'),
-		jobTitle: 'Full-Stack Developer & Digital Strategist',
+		name: "Luke O'Regan",
+		url: absoluteUrl('/'),
+		jobTitle: 'Senior Full-Stack Developer & Digital Strategist',
 		sameAs: [
 			'https://www.linkedin.com/in/lukeoregan/',
 			'https://github.com/lukeoregan88/',
@@ -34,8 +34,8 @@ export function getWebsiteSchema() {
 		description: config.description,
 		author: {
 			'@type': 'Person',
-			name: 'Luke O\'Regan',
-			url: absoluteUrl('/about/')
+			name: "Luke O'Regan",
+			url: absoluteUrl('/')
 		}
 	}
 }
@@ -62,13 +62,13 @@ export function getArticleSchema({
 		datePublished: new Date(date).toISOString(),
 		author: {
 			'@type': 'Person',
-			name: 'Luke O\'Regan',
-			url: absoluteUrl('/about/')
+			name: "Luke O'Regan",
+			url: absoluteUrl('/')
 		},
 		publisher: {
 			'@type': 'Person',
-			name: 'Luke O\'Regan',
-			url: absoluteUrl('/about/')
+			name: "Luke O'Regan",
+			url: absoluteUrl('/')
 		},
 		mainEntityOfPage: absoluteUrl(`/${slug}/`),
 		image: absoluteUrl('/og-image.png'),

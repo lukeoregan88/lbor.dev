@@ -23,4 +23,4 @@ Read the build notes: [Building a UK Weather Platform with SvelteKit](/building-
 
 ---
 
-Looking for client work or collaboration? See the [About](/about/) page or [get in touch](/contact/).
+Looking for client work or collaboration? [Get in touch](/contact/).

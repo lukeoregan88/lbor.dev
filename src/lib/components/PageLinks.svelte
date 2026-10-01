@@ -1,7 +1,8 @@
 <nav class="page-links" aria-label="Site pages">
 	<p>
 		More from this site:
-		<a href="/about/">About</a>,
+		<a href="/">Home</a>,
+		<a href="/writings/">Writings</a>,
 		<a href="/projects/">Projects</a>,
 		<a href="/contact/">Contact</a>
 	</p>
