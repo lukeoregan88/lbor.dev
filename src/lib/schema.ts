@@ -1,4 +1,5 @@
 import * as config from './config'
+import { normalizeDate } from './dates'
 
 type BreadcrumbItem = {
 	name: string
@@ -45,12 +46,14 @@ export function getArticleSchema({
 	description,
 	slug,
 	date,
+	updated,
 	categories = []
 }: {
 	title: string
 	description: string
 	slug: string
 	date: string
+	updated?: string
 	categories?: string[]
 }) {
 	return {
@@ -59,7 +62,8 @@ export function getArticleSchema({
 		headline: title,
 		description,
 		url: absoluteUrl(`/${slug}/`),
-		datePublished: new Date(date).toISOString(),
+		datePublished: normalizeDate(date),
+		dateModified: normalizeDate(updated) ?? normalizeDate(date),
 		author: {
 			'@type': 'Person',
 			name: "Luke O'Regan",

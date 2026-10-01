@@ -15,7 +15,7 @@ function escapeXml(value: string) {
 export async function GET() {
 	const posts = await getPosts()
 
-	const headers = { 'Content-Type': 'application/xml' }
+	const headers = { 'Content-Type': 'application/rss+xml; charset=utf-8' }
 
 	const xml = `
 		<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">

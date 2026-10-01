@@ -3,6 +3,8 @@ export type Post = {
 	slug: string
 	description: string
 	date: string
+	updated?: string
+	seoTitle?: string
 	categories: string[]
 	published: boolean
 }

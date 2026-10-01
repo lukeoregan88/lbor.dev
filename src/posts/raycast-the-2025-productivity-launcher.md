@@ -1,5 +1,6 @@
 ---
 title: Raycast - The 2025 Productivity Launcher
+seoTitle: 'Raycast: The 2025 Productivity Launcher'
 description: A review of Raycast, a modern productivity tool for macOS
 date: '2025-11-01'
 published: true

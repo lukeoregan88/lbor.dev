@@ -1,7 +1,8 @@
 ---
 title: How to disable HTML in WordPress comments without a plugin
+seoTitle: 'Disable HTML in WordPress Comments Without a Plugin'
 description: Learn how to sanitize and escape WordPress comment content to prevent HTML from being rendered, ensuring security and integrity of user-generated content.
-date: '2023-4-18'
+date: '2023-04-18'
 categories:
   - wordpress
   - php

@@ -8,7 +8,10 @@
 
 	let { data } = $props()
 
-	const seoProps = $derived(getSEOFromMetadata({ ...data.meta, slug: data.slug }, `/${data.slug}/`))
+	const seoProps = $derived({
+		...getSEOFromMetadata({ ...data.meta, slug: data.slug }, `/${data.slug}/`),
+		type: 'article' as const
+	})
 
 	const jsonLd = $derived([
 		getArticleSchema({
@@ -16,6 +19,7 @@
 			description: data.meta.description,
 			slug: data.slug,
 			date: data.meta.date,
+			updated: data.meta.updated,
 			categories: data.meta.categories
 		}),
 		getBreadcrumbSchema([
@@ -30,7 +34,13 @@
 <article class="page-content">
 	<hgroup>
 		<h1>{data.meta.title}</h1>
-		<p>Published at {formatDate(data.meta.date)}</p>
+		<p>By <a href="/" rel="author">Luke O'Regan</a></p>
+		<p>
+			Published <time datetime={seoProps.publishedTime}>{formatDate(data.meta.date)}</time>
+			{#if seoProps.modifiedTime}
+				· Updated <time datetime={seoProps.modifiedTime}>{formatDate(seoProps.modifiedTime)}</time>
+			{/if}
+		</p>
 	</hgroup>
 
 	<div class="tags">

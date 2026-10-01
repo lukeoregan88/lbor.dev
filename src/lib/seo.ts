@@ -1,8 +1,10 @@
-import { dev } from '$app/environment'
 import * as config from './config'
+import { getPageTitle } from './seo-title'
+import { normalizeDate } from './dates'
 
 export interface SEOProps {
 	title?: string
+	seoTitle?: string
 	description?: string
 	image?: string
 	url?: string
@@ -20,18 +22,19 @@ export interface SEOProps {
  */
 export function getSEOTags({
 	title = config.title,
+	seoTitle,
 	description = config.description,
 	image = `${config.url}/og-image.png`,
 	url = '',
 	type = 'website',
 	publishedTime,
 	modifiedTime,
-	author = 'Luke O\'Regan',
+	author = "Luke O'Regan",
 	tags = [],
 	noindex = false
 }: SEOProps = {}) {
 	const canonicalUrl = url ? `${config.url}${url}` : `${config.url}/`
-	const fullTitle = title === config.title ? title : `${title} | ${config.title}`
+	const fullTitle = getPageTitle(title, config.title, seoTitle)
 
 	return {
 		title: fullTitle,
@@ -67,14 +70,19 @@ export function getSEOTags({
  * Helper to extract SEO data from markdown frontmatter
  * Works with both posts and pages
  */
-export function getSEOFromMetadata(metadata: {
-	title?: string
-	description?: string
-	date?: string
-	categories?: string[]
-	slug?: string
-	[key: string]: unknown
-}, urlPath = ''): SEOProps {
+export function getSEOFromMetadata(
+	metadata: {
+		title?: string
+		seoTitle?: string
+		description?: string
+		date?: string
+		updated?: string
+		categories?: string[]
+		slug?: string
+		[key: string]: unknown
+	},
+	urlPath = ''
+): SEOProps {
 	const props: SEOProps = {
 		url: urlPath || (metadata.slug ? `/${metadata.slug}/` : ''),
 		type: metadata.categories ? 'article' : 'website',
@@ -85,17 +93,14 @@ export function getSEOFromMetadata(metadata: {
 	if (metadata.title && metadata.title.trim()) {
 		props.title = metadata.title.trim()
 	}
+	if (metadata.seoTitle && metadata.seoTitle.trim()) {
+		props.seoTitle = metadata.seoTitle.trim()
+	}
 	if (metadata.description && metadata.description.trim()) {
 		props.description = metadata.description.trim()
 	}
-	if (metadata.date) {
-		try {
-			props.publishedTime = new Date(metadata.date).toISOString()
-		} catch {
-			// Invalid date, skip
-		}
-	}
+	props.publishedTime = normalizeDate(metadata.date)
+	props.modifiedTime = normalizeDate(metadata.updated)
 
 	return props
 }
-

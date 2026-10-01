@@ -1,5 +1,6 @@
 import * as config from '$lib/config'
 import { getPosts } from '$lib/posts'
+import { normalizeDate } from '$lib/dates'
 
 export const prerender = true
 
@@ -39,7 +40,7 @@ export async function GET() {
 	)
 
 	const postEntries = posts.map((post) => {
-		const lastmod = new Date(post.date).toISOString().split('T')[0]
+		const lastmod = normalizeDate(post.updated) ?? normalizeDate(post.date)
 		return urlEntry(`/${post.slug}/`, lastmod, 'monthly', '0.9')
 	})
 

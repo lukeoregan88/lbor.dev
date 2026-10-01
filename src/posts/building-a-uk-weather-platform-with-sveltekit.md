@@ -1,5 +1,6 @@
 ---
 title: Building a UK Weather Platform with SvelteKit — Developer’s Journey
+seoTitle: 'Building a UK Weather Platform with SvelteKit'
 description: A developer walkthrough building the UK Weather Analytics Dashboard with SvelteKit, TypeScript, Tailwind and Open‑Meteo. Learn architecture, API design, caching, analytics and deployment best practices.
 date: '2025-11-02'
 categories:

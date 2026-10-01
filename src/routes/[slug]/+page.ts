@@ -1,4 +1,5 @@
 import { error } from '@sveltejs/kit'
+import { dev } from '$app/environment'
 import { getPosts, getRelatedPosts } from '$lib/posts'
 
 export async function load({ params }) {
@@ -7,6 +8,10 @@ export async function load({ params }) {
 	try {
 		post = await import(`../../posts/${params.slug}.md`)
 	} catch {
+		error(404, `Could not find ${params.slug}`)
+	}
+
+	if (!dev && post.metadata.published !== true) {
 		error(404, `Could not find ${params.slug}`)
 	}
 

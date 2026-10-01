@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { SEOProps } from '$lib/seo'
 	import { getSEOTags } from '$lib/seo'
+	import { getJsonLdScript } from '$lib/json-ld'
 
 	interface Props extends SEOProps {
 		jsonLd?: Record<string, unknown>[]
@@ -28,6 +29,9 @@
 	{#if seo.openGraph.publishedTime}
 		<meta property="article:published_time" content={seo.openGraph.publishedTime} />
 	{/if}
+	{#if seo.openGraph.modifiedTime}
+		<meta property="article:modified_time" content={seo.openGraph.modifiedTime} />
+	{/if}
 	{#if seo.openGraph.tags && seo.openGraph.tags.length > 0}
 		{#each seo.openGraph.tags as tag}
 			<meta property="article:tag" content={tag} />
@@ -42,8 +46,8 @@
 	<link rel="canonical" href={seo.canonicalUrl} />
 
 	{#each jsonLd as schema (JSON.stringify(schema))}
-		<script type="application/ld+json">
-			{JSON.stringify(schema)}
-		</script>
+		<!-- Script-breaking characters are escaped by getJsonLdScript; this is not arbitrary HTML. -->
+		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+		{@html getJsonLdScript(schema)}
 	{/each}
 </svelte:head>

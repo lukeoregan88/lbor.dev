@@ -1,5 +1,6 @@
 ---
 title: Hostinger Review 2026 — Affordable, Fast & Reliable UK Web Hosting (Personal Experience)
+seoTitle: 'Hostinger Review 2026: UK Hosting Experience'
 description: An honest Hostinger review from a year of real use. Discover performance, security, pricing, hPanel, and how to get started with a 20% discount (UK).
 date: '2025-11-02'
 categories:
