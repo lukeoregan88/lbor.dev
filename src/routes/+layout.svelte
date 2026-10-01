@@ -29,6 +29,7 @@
 		max-inline-size: 1440px;
 		display: grid;
 		grid-template-rows: auto 1fr auto;
+		grid-template-columns: minmax(0, 1fr);
 		margin-inline: auto;
 		padding-inline: var(--size-7);
 
