@@ -11,12 +11,20 @@ function absoluteUrl(path = '/') {
 	return `${config.url}${normalised}`
 }
 
+// Stable entity identifier, including in previews: https://www.w3.org/TR/json-ld11/#node-identifiers
+function getPersonIdentity() {
+	return {
+		'@type': 'Person',
+		'@id': `${config.productionUrl}/#person`,
+		name: "Luke O'Regan",
+		url: `${config.productionUrl}/`
+	}
+}
+
 export function getPersonSchema() {
 	return {
 		'@context': 'https://schema.org',
-		'@type': 'Person',
-		name: "Luke O'Regan",
-		url: absoluteUrl('/'),
+		...getPersonIdentity(),
 		jobTitle: 'Senior Full-Stack Developer & Digital Strategist',
 		sameAs: [
 			'https://www.linkedin.com/in/lukeoregan/',
@@ -33,11 +41,7 @@ export function getWebsiteSchema() {
 		name: config.siteName,
 		url: absoluteUrl('/'),
 		description: config.description,
-		author: {
-			'@type': 'Person',
-			name: "Luke O'Regan",
-			url: absoluteUrl('/')
-		}
+		author: getPersonIdentity()
 	}
 }
 
@@ -64,16 +68,8 @@ export function getArticleSchema({
 		url: absoluteUrl(`/${slug}/`),
 		datePublished: normalizeDate(date),
 		dateModified: normalizeDate(updated) ?? normalizeDate(date),
-		author: {
-			'@type': 'Person',
-			name: "Luke O'Regan",
-			url: absoluteUrl('/')
-		},
-		publisher: {
-			'@type': 'Person',
-			name: "Luke O'Regan",
-			url: absoluteUrl('/')
-		},
+		author: getPersonIdentity(),
+		publisher: getPersonIdentity(),
 		mainEntityOfPage: absoluteUrl(`/${slug}/`),
 		image: absoluteUrl('/og-image.png'),
 		...(categories.length > 0 && { keywords: categories.join(', ') })

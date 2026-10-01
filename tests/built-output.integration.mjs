@@ -12,6 +12,12 @@ const parseSchemas = (html) =>
 test('clean production articles have valid schema, semantic dates and short SEO titles', async () => {
 	const sitemap = await readFile(`${pages}/sitemap.xml`, 'utf8')
 	const rss = await readFile(`${pages}/rss.xml`, 'utf8')
+	const llms = await readFile(`${pages}/llms.txt`, 'utf8')
+	const home = await readFile(`${pages}/index.html`, 'utf8')
+	const person = parseSchemas(home).find((schema) => schema['@type'] === 'Person')
+	assert.equal(person['@id'], 'https://lbor.dev/#person')
+	assert.equal(parseSchemas(home)[0].author['@id'], person['@id'])
+	const writings = await readFile(`${pages}/writings/index.html`, 'utf8')
 	const files = (await readdir('src/posts')).filter((file) => file.endsWith('.md'))
 	let count = 0
 	for (const file of files) {
@@ -34,6 +40,13 @@ test('clean production articles have valid schema, semantic dates and short SEO 
 		const article = schemas[0]
 		assert.equal(article.url, `https://lbor.dev/${slug}/`)
 		assert.equal(article.author.name, "Luke O'Regan")
+		for (const identity of [article.author, article.publisher]) {
+			assert.equal(identity['@id'], person['@id'])
+			assert.equal(identity.url, person.url)
+		}
+		assert.match(html, /<a href="\/" rel="author">Luke O(?:'|&#39;|&#x27;)Regan<\/a>/)
+		assert.ok(writings.includes(`href="/${slug}/"`))
+		assert.ok(llms.includes(`https://lbor.dev/${slug}/`))
 		const date = normalizeDate(markdown.match(/^date: '(.+)'$/m)?.[1])
 		const updated = normalizeDate(markdown.match(/^updated: '(.+)'$/m)?.[1]) ?? date
 		assert.equal(article.datePublished, date)
@@ -47,6 +60,11 @@ test('clean production articles have valid schema, semantic dates and short SEO 
 	assert.equal((rss.match(/<item>/g) ?? []).length, count)
 	assert.equal(sitemap.includes('seo-regression-'), false)
 	assert.equal(rss.includes('seo-regression-'), false)
+	assert.equal(llms.includes('seo-regression-'), false)
+	assert.equal(
+		(llms.match(/^## Published articles\n\n([\s\S]*)/m)?.[1].match(/^- /gm) ?? []).length,
+		count
+	)
 	const articleHtml = await readFile(
 		`${pages}/custom-wordpress-importer-vs-plugin/index.html`,
 		'utf8'

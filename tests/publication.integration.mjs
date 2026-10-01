@@ -6,7 +6,7 @@ import { createServer } from 'vite'
 
 // Fixtures are synthetic and removed even when a regression fails. Run separately
 // from the fast SSR tests because this exercises a real production build.
-test('dev previews drafts; production loader, sitemap and RSS exclude them', async () => {
+test('dev previews drafts; production loader, sitemap, RSS and llms exclude them', async () => {
 	const draft = 'seo-regression-draft'
 	const published = 'seo-regression-published'
 	const fixtures = [draft, published].map((slug) => `src/posts/${slug}.md`)
@@ -39,7 +39,7 @@ test('dev previews drafts; production loader, sitemap and RSS exclude them', asy
 			articleSchemas[0].url,
 			'http://localhost:5173/custom-wordpress-importer-vs-plugin/'
 		)
-		for (const path of ['/sitemap.xml', '/rss.xml']) {
+		for (const path of ['/sitemap.xml', '/rss.xml', '/llms.txt']) {
 			const response = await fetch(base + path)
 			assert.equal(response.status, 200)
 			const text = await response.text()
@@ -68,7 +68,10 @@ test('dev previews drafts; production loader, sitemap and RSS exclude them', asy
 		assert.equal(jsonLd[0].dateModified, '2026-09-02T00:00:00.000Z')
 		const sitemap = await readFile('.svelte-kit/output/prerendered/pages/sitemap.xml', 'utf8')
 		const rss = await readFile('.svelte-kit/output/prerendered/pages/rss.xml', 'utf8')
-		for (const text of [sitemap, rss]) {
+		const llms = await readFile('.svelte-kit/output/prerendered/pages/llms.txt', 'utf8')
+		assert.ok(llms.includes(`https://lbor.dev/${published}/`))
+		assert.doesNotMatch(llms, /localhost|127\.0\.0\.1/)
+		for (const text of [sitemap, rss, llms]) {
 			assert.equal(text.includes(draft), false)
 			assert.equal(text.includes(published), true)
 		}
