@@ -197,6 +197,12 @@ li {
 		border-radius: 8px;
 		tab-size: 2;
 	}
+
+	table {
+		display: block;
+		max-inline-size: 100%;
+		overflow-x: auto;
+	}
 }
 
 .shiki {
