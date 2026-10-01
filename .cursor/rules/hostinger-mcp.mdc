@@ -1,0 +1,12 @@
+---
+description: Use this project's Hostinger MCP for LBOR hosting work
+alwaysApply: true
+---
+
+# Hostinger MCP
+
+This project is the LBOR Hostinger account. Hosting, DNS, domains, WordPress, and other Hostinger API work goes through the project server `hostinger-lbor`, defined in `.cursor/mcp.json`.
+
+- Call tools on `hostinger-lbor` only.
+- Do not call `hostinger-dda`, `user-hostinger`, or any other Hostinger MCP for this repo.
+- If `hostinger-lbor` is not connected, stop and say so. Do not fall back to another Hostinger account.

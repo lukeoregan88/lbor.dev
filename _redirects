@@ -1,0 +1,7 @@
+# Legacy URL redirects
+/blog / 301
+/blog/ / 301
+/tools /projects/ 301
+/tools/ /projects/ 301
+/links /about/ 301
+/links/ /about/ 301

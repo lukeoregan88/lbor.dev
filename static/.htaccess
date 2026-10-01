@@ -1,4 +1,0 @@
-# Legacy URL redirects
-RedirectMatch 301 ^/blog/?$ /
-RedirectMatch 301 ^/tools/?$ /projects/
-RedirectMatch 301 ^/links/?$ /about/

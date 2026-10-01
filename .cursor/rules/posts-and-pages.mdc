@@ -1,0 +1,28 @@
+---
+description: Where posts and pages live, and the frontmatter they need
+alwaysApply: true
+---
+
+# Posts and pages
+
+Posts are Markdown files in `src/posts/`. Standalone pages (about, contact, projects) are Markdown in `src/pages/` and are loaded by their matching route. Do not add a CMS, a content database, or a second content folder.
+
+The filename is the slug. `getPosts()` in `src/lib/posts.ts` only lists a post when `published` is true.
+
+Post frontmatter:
+
+```yaml
+---
+title: Post title
+description: One or two sentences for the listing and meta description.
+date: 'YYYY-MM-DD'
+categories:
+  - sveltekit
+published: true
+---
+```
+
+- Keep `date` as a quoted `YYYY-MM-DD` string.
+- Use lowercase category slugs already used on the site (`sveltekit`, `wordpress`, `hosting`, `review`) unless a new category is clearly needed.
+- Write public copy in British English.
+- Link to posts as `/${slug}/`.

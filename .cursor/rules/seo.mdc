@@ -1,0 +1,13 @@
+---
+description: SEO metadata and structured data for lbor.dev
+alwaysApply: true
+---
+
+# SEO
+
+Site name, default title, description, and canonical origin live in `src/lib/config.ts`. Change them there, not in individual pages.
+
+- Render metadata with `SeoHead` from `src/lib/components/SeoHead.svelte`. Pass `title`, `description`, and `url`. It builds tags through `getSEOTags()` in `src/lib/seo.ts`.
+- Add structured data with the helpers in `src/lib/schema.ts` (`getPersonSchema`, `getWebsiteSchema`, `getArticleSchema`) via the `jsonLd` prop. Do not hand-write a second JSON-LD script.
+- Post and page descriptions come from frontmatter `description`. Keep them specific enough to stand alone in search results.
+- The production origin is `https://lbor.dev`. Leave `config.url` switching on `$app/environment` `dev`.

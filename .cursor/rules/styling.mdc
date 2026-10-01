@@ -1,0 +1,13 @@
+---
+description: Open Props styling for the lbor.dev layout
+alwaysApply: true
+---
+
+# Styling
+
+Styles use Open Props (`open-props/style`, `normalize`, `buttons`) and the custom properties in `src/app.css`. Dark is the default; light values already exist as `--*-light` tokens.
+
+- Style components with a scoped `<style>` block. Use Open Props tokens (`--size-*`, `--font-*`) and the site tokens (`--text-1`, `--surface-1`, `--brand`).
+- Do not add Tailwind, a component library, or a new global stylesheet.
+- Layout width is `1440px` with `padding-inline: var(--size-7)`, set on `.layout` in `src/routes/+layout.svelte`.
+- Body type is Atkinson Hyperlegible. Code is JetBrains Mono. Shiki highlighting uses the `poimandres` theme.

@@ -1,0 +1,15 @@
+---
+description: Svelte 5 and SvelteKit conventions for this site
+alwaysApply: true
+---
+
+# SvelteKit
+
+This is a Svelte 5 SvelteKit site built with Vite and published with `@sveltejs/adapter-cloudflare`. Existing pages stay prerendered (`prerender = true` in `src/routes/+layout.ts`). A route that must run on each request sets `prerender = false` on that page. Do not add a server database, auth, or a second adapter.
+
+- Use runes (`$props`, `$derived`, `$state`) in components. Match existing files such as `src/routes/+layout.svelte`.
+- Put shared logic in `src/lib/`. Import it with `$lib`.
+- Load Markdown from `+page.ts` the same way `src/routes/[slug]/+page.ts` and `src/routes/about/+page.ts` do. Return `content`, `meta`, and anything the page already expects.
+- A new post does not need a new route. `[slug]` already renders `src/posts/*.md`.
+- Tabs for indentation. Run `npm run check` after Svelte or TypeScript changes.
+- Cloudflare config lives in `wrangler.jsonc`. Deploy with `npm run deploy` after `npm run build`.
