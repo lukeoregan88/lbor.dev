@@ -71,7 +71,7 @@ export function getArticleSchema({
 		author: getPersonIdentity(),
 		publisher: getPersonIdentity(),
 		mainEntityOfPage: absoluteUrl(`/${slug}/`),
-		image: absoluteUrl('/og-image.png'),
+		image: absoluteUrl('/og-image-wide.png'),
 		...(categories.length > 0 && { keywords: categories.join(', ') })
 	}
 }

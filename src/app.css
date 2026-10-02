@@ -157,6 +157,10 @@ li {
 }
 
 .prose {
+	a {
+		overflow-wrap: anywhere;
+	}
+
 	p {
 		margin-bottom: var(--size-7);
 		:not(:is(h2, h3, h4, h5, h6) + p) {

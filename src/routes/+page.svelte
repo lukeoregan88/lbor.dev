@@ -27,8 +27,9 @@
 
 	<p>
 		I currently work as a Senior Full-Stack &amp; Multimedia Developer at
-		<a href="https://dda.co.uk/">Direct Design Studio</a>, building web applications and CMS-driven
-		websites from design and architecture through to deployment and ongoing optimisation.
+		<a href="https://dda.co.uk/" target="_blank" rel="noopener noreferrer">Direct Design Studio</a>,
+		building web applications and CMS-driven websites from design and architecture through to
+		deployment and ongoing optimisation.
 	</p>
 
 	<h2>What I do</h2>

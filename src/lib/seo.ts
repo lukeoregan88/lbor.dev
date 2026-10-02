@@ -24,7 +24,7 @@ export function getSEOTags({
 	title = config.title,
 	seoTitle,
 	description = config.description,
-	image = `${config.url}/og-image.png`,
+	image = `${config.url}/og-image-wide.png`,
 	url = '',
 	type = 'website',
 	publishedTime,

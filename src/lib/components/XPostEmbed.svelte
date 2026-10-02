@@ -42,17 +42,27 @@
 			maintain projects and handle issues.
 		</p>
 		&mdash; Sindre Sorhus (@sindresorhus)
-		<a href="https://x.com/sindresorhus/status/2105693826690298314">October 1, 2026</a>
+		<a
+			href="https://x.com/sindresorhus/status/2105693826690298314"
+			target="_blank"
+			rel="noopener noreferrer">October 1, 2026</a
+		>
 	</blockquote>
 </figure>
 
 <style>
 	.x-post-embed {
+		width: 100%;
+		max-width: 550px;
 		margin-block: var(--size-6);
+		margin-inline: auto;
 	}
 
-	:global(.twitter-tweet) {
-		margin-inline: auto;
-		max-width: 550px;
+	:global(.twitter-tweet),
+	:global(iframe.twitter-tweet-rendered) {
+		box-sizing: border-box;
+		width: 100% !important;
+		max-width: 100% !important;
+		min-width: 0 !important;
 	}
 </style>
