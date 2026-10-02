@@ -10,11 +10,19 @@ categories:
 published: true
 ---
 
-AI has made it easier to produce code. It has not made it easier to decide what belongs in a project, review it safely, or support it for years afterwards. In open source, that gap matters: a pull request is not just a patch. It is a request for someone else’s attention.
+<script>
+	import XPostEmbed from '$lib/components/XPostEmbed.svelte'
+</script>
 
-That is why Sindre Sorhus’s decision to disable external pull requests across his repositories caught my attention. He says he will continue maintaining his projects and handling issues, but no longer accept outside pull requests.[4] In a follow-up, he makes clear that this is not simply an anti-AI reaction: he believes contribution quality was declining before AI, while AI has accelerated that trend and made PR spam worse. He also uses AI himself, and says it can be quicker to generate, verify and ship a fix than to spend time reviewing a low-quality submission.[5]
+I stumbled across a post from an open-source maintainer announcing that external pull requests were disabled across their repositories, while issues and ongoing maintenance would continue.[4]
 
-It is a striking response, but the underlying pressure is not new. Open source has always depended on people donating more than code: they donate time to review, explain, coordinate, release and keep projects dependable. AI changes the price of producing a proposed change. It does not remove the work of deciding whether that change is useful.
+It made me take a step back. In a follow-up, the maintainer explained the decision in terms of time: they use AI to generate, verify and ship fixes rather than spend time reviewing low-quality submissions. They also made clear that the problem was not caused by AI alone; in their view, contribution quality had been declining already, and AI accelerated the trend.[5]
+
+That made the current capability of AI feel concrete to me. The striking part was not just that AI can produce code, but that an experienced maintainer might find it faster to produce and verify a fix than to review an outside contribution. That is one person’s experience, not a verdict on every project—but it made me think about what happens when producing code gets cheaper while reviewing and maintaining it still costs human time.
+
+<XPostEmbed />
+
+The pressure behind that decision is not new. Open source has always depended on people donating more than code: they donate time to review, explain, coordinate, release and keep projects dependable. AI changes the price of producing a proposed change. It does not remove the work of deciding whether that change is useful.
 
 ## Code is not the whole contribution
 
@@ -64,6 +72,6 @@ If you maintain or contribute to open source, what should change first: who can 
 
 [3] [The 2023 Tidelift State of the Open Source Maintainer Report](https://www.sonarsource.com/open-source-maintainer-survey-2023.pdf)
 
-[4] [Sindre Sorhus on disabling external pull requests](https://x.com/sindresorhus/status/2105693826690298314)
+[4] [Original post on X](https://x.com/sindresorhus/status/2105693826690298314)
 
-[5] [Sindre Sorhus on why he disabled external pull requests](https://x.com/sindresorhus/status/2105720399266984369)
+[5] [Follow-up on X](https://x.com/sindresorhus/status/2105720399266984369)
