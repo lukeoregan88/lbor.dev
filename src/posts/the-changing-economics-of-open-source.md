@@ -14,9 +14,9 @@ published: true
 	import XPostEmbed from '$lib/components/XPostEmbed.svelte'
 </script>
 
-I stumbled across a post from an open-source maintainer announcing that external pull requests were disabled across their repositories, while issues and ongoing maintenance would continue.[4]
+I came across a post from an open-source maintainer who had turned off external pull requests across their repositories. They would keep handling issues and maintaining the projects, but no longer accept outside patches for review.[4]
 
-It made me take a step back. In a follow-up, the maintainer explained the decision in terms of time: they use AI to generate, verify and ship fixes rather than spend time reviewing low-quality submissions. They also made clear that the problem was not caused by AI alone; in their view, contribution quality had been declining already, and AI accelerated the trend.[5]
+In a follow-up, they described the time trade-off. They use AI to generate, verify and ship fixes instead of spending that time reviewing low-quality submissions. They said contribution quality had already been declining, and AI had accelerated the trend.[5]
 
 That made the current capability of AI feel concrete to me. The striking part was not just that AI can produce code, but that an experienced maintainer might find it faster to produce and verify a fix than to review an outside contribution. That is one person’s experience, not a verdict on every project—but it made me think about what happens when producing code gets cheaper while reviewing and maintaining it still costs human time.
 
