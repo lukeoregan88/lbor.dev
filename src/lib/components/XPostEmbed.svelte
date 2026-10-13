@@ -1,6 +1,26 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 
+	interface Props {
+		lines?: string[]
+		author?: string
+		handle?: string
+		date?: string
+		url?: string
+	}
+
+	let {
+		lines = [
+			'Due to AI, I have disabled external pull requests on all my repos.',
+			'Open source, as we have known it, was fun while it lasted. (It’s been 15 years for me)',
+			'I will still maintain projects and handle issues.'
+		],
+		author = 'Sindre Sorhus',
+		handle = 'sindresorhus',
+		date = 'October 1, 2026',
+		url = 'https://x.com/sindresorhus/status/2105693826690298314'
+	}: Props = $props()
+
 	let embedRoot: HTMLElement
 
 	onMount(() => {
@@ -37,16 +57,12 @@
 <figure class="x-post-embed" bind:this={embedRoot}>
 	<blockquote class="twitter-tweet">
 		<p lang="en" dir="ltr">
-			Due to AI, I have disabled external pull requests on all my repos.<br /><br />Open source, as
-			we have known it, was fun while it lasted. (It’s been 15 years for me)<br /><br />I will still
-			maintain projects and handle issues.
+			{#each lines as line, index (index)}
+				{#if index > 0}<br /><br />{/if}{line}
+			{/each}
 		</p>
-		&mdash; Sindre Sorhus (@sindresorhus)
-		<a
-			href="https://x.com/sindresorhus/status/2105693826690298314"
-			target="_blank"
-			rel="noopener noreferrer">October 1, 2026</a
-		>
+		&mdash; {author} (@{handle})
+		<a href={url} target="_blank" rel="noopener noreferrer">{date}</a>
 	</blockquote>
 </figure>
 
