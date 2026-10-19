@@ -21,7 +21,7 @@ In practice I message it like a colleague. I say what I need, it goes off and do
 
 ## The call from “Emily from Manchester Police”
 
-One evening a woman calling herself “Emily from Manchester Police” rang me. It sounded wrong, so I reported it through the contact portal on Greater Manchester Police’s (GMP) website. That one was a scam.
+One evening a woman calling herself “Emily from Manchester Police” rang me. It sounded wrong, so I hung up. Grok Bot looked into the number and submitted a report through the contact portal on Greater Manchester Police’s (GMP) website. That one was a scam.
 
 The next morning more calls came in, this time from Manchester numbers. I had no idea whether they were the scammers trying again or someone from GMP responding to my report. Instead of searching each number myself, I asked Grok Bot to look into them.
 
@@ -41,7 +41,7 @@ It also fixed a mistake of mine. I had assumed report@phishing.gov.uk was somewh
 
 ## Then an email arrived
 
-Next came an email from a GMP Cyber Crime address. It mentioned the report I had made the night before and said the Cyber Crime Unit had received several similar reports. It asked me to call back, and it said I could check the sender by giving their collar number to GMP call handlers, either on 101 or through the live chat on GMP’s website.
+Next came an email from a GMP Cyber Crime address. It mentioned the report submitted the night before and said the Cyber Crime Unit had received several similar reports. It asked me to call back, and it said I could check the sender by giving their collar number to GMP call handlers, either on 101 or through the live chat on GMP’s website.
 
 I asked Grok Bot to check it. It could not find the sender’s address published on GMP’s website. It found nothing about the callback number either, other than that it sits in a range some real GMP lines use. With a run of “police” numbers, it leaned towards this being the same scammers trying a new angle, and it told me to be wary.
 
@@ -51,7 +51,7 @@ That sounded reasonable to me. But the email had done something a scammer would 
 
 So I asked Grok Bot to open the live chat on GMP’s official website. It worked through the site’s security check and the cookie banner and reached the chat form. The form wanted a name, email address and mobile number before it would pass on a message. That is understandable for a police force, but you do hand over personal details before you have asked your question.
 
-With my permission, Grok Bot read the email in my inbox so it could give the operator the investigator’s name and collar number. The operator asked whether I had phoned the police the night before. The answer was that I had used the web portal instead.
+With my permission, Grok Bot read the email in my inbox so it could give the operator the investigator’s name and collar number. The operator asked whether a police call had been made the night before. The answer was that the report had gone through the web portal instead.
 
 The operator then confirmed that the name and collar number matched a GMP employee. The email was genuine, from a real Cyber Crime Investigator following up on my report.
 
