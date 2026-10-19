@@ -3,6 +3,7 @@ title: Raycast - The 2025 Productivity Launcher
 seoTitle: 'Raycast: The 2025 Productivity Launcher'
 description: A review of Raycast, a modern productivity tool for macOS
 date: '2025-11-01'
+updated: '2026-10-19'
 published: true
 ---
 
@@ -70,9 +71,17 @@ Raycast now offers **far more AI capabilities** and a **Windows client**, while 
 
 ---  
 
-## The Road Ahead  
+## Raycast 2.0
 
-Raycast’s roadmap for 2026 focuses on **deep AI‑tool integration**, **full cross‑platform parity**, and **enhanced privacy controls** (e.g., on‑device model execution by default). Community‑driven extensions continue to grow, with over **300 new add‑ons** added in the last six months alone.  
+*Checked against [Raycast's own page for the new version](https://www.raycast.com/new) on 19 October 2026.*
+
+Raycast 2.0 is a rebuilt version of the app. On installation it replaces Raycast v1, and onboarding lets you import your existing setup. Raycast describes it as a major update with frequent updates and occasional rough edges, and says a handful of features are still missing.
+
+* **Requirements:** macOS Tahoe and Apple Silicon. Anyone still on Sequoia or earlier has to upgrade macOS first.
+* **What's new:** a refreshed look for macOS Tahoe, file search in the root search, a Quick AI mode, an AI Chat with skills, agents and memory, built-in dictation, reorganised settings, and hotkeys and aliases that you can assign from root search.
+* **Migrating:** a `Migrate from Raycast v1` command moves your settings, shortcuts and data. Raycast recommends being on v1.104.16 or later first so custom extensions import correctly.
+
+The details above come from Raycast's page, not from my own testing of version 2. The feature tables earlier in this review describe Raycast as it stood in 2025 and haven't been re-tested against 2.0.
 
 ---  
 
@@ -85,4 +94,4 @@ Raycast’s roadmap for 2026 focuses on **deep AI‑tool integration**, **full c
 
 ---  
 
-*All information sourced from Raycast changelog entries, product‑hunt launch notes, official release notes and the Raycast Wikipedia entry.*  
+*Sources: Raycast changelog entries, product‑hunt launch notes and official release notes for the 2024–2025 material, and [Raycast's version 2 page](https://www.raycast.com/new) (checked 19 October 2026) for the Raycast 2.0 section.*

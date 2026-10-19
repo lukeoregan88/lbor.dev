@@ -1,8 +1,9 @@
 ---
 title: Hostinger Review 2026 — Affordable, Fast & Reliable UK Web Hosting (Personal Experience)
 seoTitle: 'Hostinger Review 2026: UK Hosting Experience'
-description: An honest Hostinger review from a year of real use. Discover performance, security, pricing, hPanel, and how to get started with a 20% discount (UK).
+description: An honest Hostinger review from a year of real use. Discover performance, security, pricing, hPanel, and how to get started with 20% off your first purchase (UK).
 date: '2025-11-02'
+updated: '2026-10-19'
 categories:
   - hosting
   - review
@@ -12,7 +13,9 @@ published: true
 
 I’ve been running sites on Hostinger for over a year. This review distils that experience into a practical, SEO-friendly guide so you can decide if Hostinger is the right hosting provider for your blog, portfolio or small business site in the UK.
 
-**Disclosure:** the Hostinger links on this page are referral links. If you sign up through one, you get the discount and I may receive a referral reward, at no extra cost to you. My views are based on my own use.
+**Disclosure:** the Hostinger links on this page are referral links. If you are a new Hostinger customer and sign up through one, you get 20% off your first purchase and I earn a 20% commission on it, at no extra cost to you. My views are based on my own use.
+
+*Offer last checked on 19 October 2026 against [Hostinger's referral programme page](https://www.hostinger.com/uk/referral-program). The 20% discount applies to a new customer's first purchase only. Existing Hostinger customers don't qualify, and later purchases don't earn me commission. Check the current terms and price at checkout.*
 
 ## Why I chose Hostinger
 
@@ -66,7 +69,7 @@ These basics reduce administrative overhead and lower the risk of common securit
 
 Hostinger’s pricing is one of its strongest points — plans are competitive in the UK market and provide clear upgrade paths as your site grows. If you’re cost-conscious but expect to scale, Hostinger strikes a sensible balance between price and capability.
 
-Special offer: Use my 20% discount link to save on your first purchase: https://hostinger.co.uk?REFERRALCODE=1LUKE485 (CODE: 1LUKE485)
+Special offer: new customers can use my referral link to get 20% off their first purchase: https://hostinger.co.uk?REFERRALCODE=1LUKE485 (CODE: 1LUKE485)
 
 ## Pros and cons
 
@@ -91,7 +94,7 @@ Special offer: Use my 20% discount link to save on your first purchase: https://
 3. Use the one-click installer to set up WordPress or your preferred CMS.
 4. Activate the free SSL and configure basic backups.
 5. Fine-tune cache settings and install a lightweight theme for best performance.
-6. Use the 20% discount link (if you want to save on your first purchase): https://hostinger.co.uk?REFERRALCODE=1LUKE485
+6. Use my referral link (new customers get 20% off their first purchase): https://hostinger.co.uk?REFERRALCODE=1LUKE485
 
 ## Frequently asked questions (FAQ)
 
@@ -111,4 +114,4 @@ While Hostinger is an international provider, it offers data centre locations an
 
 After a year of hands-on experience, Hostinger is a reliable, cost-effective choice for UK-based bloggers, small businesses and developers who want fast hosting without complex management. It’s especially strong where value and speed matter most.
 
-Ready to try Hostinger? Start here with a 20% discount: https://hostinger.co.uk?REFERRALCODE=1LUKE485 (CODE: 1LUKE485)
+Ready to try Hostinger? New customers get 20% off their first purchase through my referral link: https://hostinger.co.uk?REFERRALCODE=1LUKE485 (CODE: 1LUKE485)

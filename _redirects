@@ -5,3 +5,6 @@
 /tools/ /projects/ 301
 /links /about/ 301
 /links/ /about/ 301
+/homepage_root /  301
+/homepage_root/ / 301
+/homepage_root/* /:splat 301

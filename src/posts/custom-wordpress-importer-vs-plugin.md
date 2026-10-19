@@ -1,6 +1,6 @@
 ---
 title: 'Custom WordPress Importer vs Plugin: How to Choose'
-seoTitle: 'WordPress Feed Importer: Custom Code or Plugin?'
+seoTitle: 'Custom WordPress Importer vs Plugin: How to Choose | LBOR'
 description: Compare a WordPress import plugin with custom code. Learn when bespoke automation fits, and what to weigh for reliability, upkeep and security.
 date: '2026-10-01'
 categories:
