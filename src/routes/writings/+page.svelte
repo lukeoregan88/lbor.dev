@@ -8,7 +8,8 @@
 </script>
 
 <SeoHead
-	title={`Writings | ${config.siteName}`}
+	title="Writings"
+	seoTitle="Writings on WordPress, SvelteKit & Web Development | LBOR"
 	description="Writing about building for the web, WordPress, SvelteKit, and practical development notes."
 	url="/writings/"
 	jsonLd={[

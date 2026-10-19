@@ -28,7 +28,13 @@ function rehypeExternalLinks() {
 								: typeof node.properties.rel === 'string'
 									? node.properties.rel.split(/\s+/)
 									: []
-							node.properties.rel = [...new Set([...rel, 'noopener', 'noreferrer'])]
+							// Referral / affiliate links: Google asks for rel="sponsored"
+							const isReferral = [...url.searchParams.keys()].some((key) =>
+								/^(referralcode|ref|aff|affiliate|aff_id)$/i.test(key)
+							)
+							node.properties.rel = [
+								...new Set([...rel, 'noopener', 'noreferrer', ...(isReferral ? ['sponsored'] : [])])
+							]
 						}
 					} catch {
 						// Leave malformed or non-web links unchanged.

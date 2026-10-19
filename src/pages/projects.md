@@ -1,5 +1,6 @@
 ---
 title: Projects
+seoTitle: 'Projects: DNS Tools & SvelteKit Apps | LBOR'
 description: Side projects and experiments by Luke O'Regan — DNS tools, SvelteKit dashboards, and practical web apps built outside client work.
 date: '2025-11-01'
 published: true

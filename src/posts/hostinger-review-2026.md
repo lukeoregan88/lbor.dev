@@ -12,6 +12,8 @@ published: true
 
 I’ve been running sites on Hostinger for over a year. This review distils that experience into a practical, SEO-friendly guide so you can decide if Hostinger is the right hosting provider for your blog, portfolio or small business site in the UK.
 
+**Disclosure:** the Hostinger links on this page are referral links. If you sign up through one, you get the discount and I may receive a referral reward, at no extra cost to you. My views are based on my own use.
+
 ## Why I chose Hostinger
 
 * Competitive pricing without sacrificing performance — ideal if you want good value for money.

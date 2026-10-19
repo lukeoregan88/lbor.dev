@@ -1,6 +1,7 @@
 ---
 title: Contact
-description: Get in touch with Luke O'Regan
+seoTitle: "Contact Luke O'Regan | LBOR"
+description: "Get in touch with Luke O'Regan, a UK full-stack developer and digital strategist, about web projects, WordPress and SvelteKit work."
 date: '2025-11-01'
 published: true
 ---
