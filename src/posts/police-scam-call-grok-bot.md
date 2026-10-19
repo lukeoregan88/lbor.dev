@@ -9,6 +9,10 @@ categories:
 published: true
 ---
 
+<script>
+	import XPostEmbed from '$lib/components/XPostEmbed.svelte'
+</script>
+
 Over two days I got a run of phone calls and an email, all supposedly from Greater Manchester Police. The first call was a scam. The rest turned out to be the real thing. Working out which was which would normally have eaten my morning, so I gave the job to [Grok Bot](https://x.ai/bot) and went back to work.
 
 It did nearly everything I asked. It also talked me into doubting an email that was genuine. Both halves of that are worth knowing if you are thinking about handing this kind of job to an AI agent.
@@ -22,6 +26,21 @@ In practice I message it like a colleague. I say what I need, it goes off and do
 ## The call from “Emily from Manchester Police”
 
 One evening a woman calling herself “Emily from Manchester Police” rang me. It sounded wrong, so I hung up. Grok Bot looked into the number and submitted a report through the contact portal on Greater Manchester Police’s (GMP) website. That one was a scam.
+
+I posted about it on X at the time:[6]
+
+<XPostEmbed
+	lines={[
+		'A great @bot use case:',
+		'I got a spoofed call from a number belonging to @gmpolice. The call sounded suspicious, so I hung up.',
+		'@bot investigated the number, submitted a report through the police website and verified the follow-up email with Cyber Crime via live chat, including the officer’s collar number and PIN. That meant I could safely call back and report the incident.',
+		'Watch out for scammers! — they’re spoofing real police numbers now. #ScamAware'
+	]}
+	author="Luke O’Regan"
+	handle="lukeoregan88"
+	date="October 16, 2026"
+	url="https://x.com/lukeoregan88/status/2111079484992397663"
+/>
 
 The next morning more calls came in, this time from Manchester numbers. I had no idea whether they were the scammers trying again or someone from GMP responding to my report. Instead of searching each number myself, I asked Grok Bot to look into them.
 
@@ -110,3 +129,5 @@ Have you had a call or email claiming to be from the police? And would you trust
 [4] [Report Fraud](https://www.reportfraud.police.uk/)
 
 [5] [Common scamming tools, Greater Manchester Police](https://www.gmp.police.uk/advice/advice-and-information/fa/fraud/personal-fraud/common-scamming-tools/)
+
+[6] [Post by Luke O’Regan on X](https://x.com/lukeoregan88/status/2111079484992397663)
