@@ -19,7 +19,7 @@ It did nearly everything I asked. It also talked me into doubting an email that 
 
 ## What is Grok Bot?
 
-I started using [Grok Bot](https://x.ai/news/introducing-grok-bot) after signing up to the X subscription. xAI launched it in beta in August and describes it as a team of always-on agents. Each one has its own computer, signs in to the tools you already use, and comes back to you when something needs your approval.[1]
+I started using [Grok Bot](https://x.ai/news/introducing-grok-bot) after signing up to the X subscription. xAI launched it in beta in August and describes it as a team of always-on agents. Each one has its own computer, signs in to the tools you already use, and comes back to you when something needs your approval.[1](#source-1)
 
 In practice I message it like a colleague. I say what I need, it goes off and does the browsing, and it reports back.
 
@@ -27,7 +27,7 @@ In practice I message it like a colleague. I say what I need, it goes off and do
 
 One evening a woman calling herself “Emily from Manchester Police” rang me. It sounded wrong, so I hung up. Grok Bot looked into the number and submitted a report through the contact portal on Greater Manchester Police’s (GMP) website. That one was a scam.
 
-I posted about it on X at the time:[6]
+I posted about it on X at the time:[6](#source-6)
 
 <XPostEmbed
 	lines={[
@@ -46,7 +46,7 @@ The next morning more calls came in, this time from Manchester numbers. I had no
 
 ## What Grok Bot found
 
-The first number was +44 161 872 5050. Grok Bot confirmed it is a genuine GMP number, the one the force lists for people contacting it from abroad.[2] It also turned up GMP’s own warning, published recently, that scammers impersonating police officers are phoning people from spoofed GMP numbers.[3]
+The first number was +44 161 872 5050. Grok Bot confirmed it is a genuine GMP number, the one the force lists for people contacting it from abroad.[2](#source-2) It also turned up GMP’s own warning, published recently, that scammers impersonating police officers are phoning people from spoofed GMP numbers.[3](#source-3)
 
 A second number was harder to pin down. Online reports were mixed, with some people calling it a genuine GMP callback line and others saying it had been spoofed.
 
@@ -54,7 +54,7 @@ Its advice was sensible:
 
 1. Hang up and call 101 yourself instead of trusting the number on screen.
 2. Text 7726 with “Call” followed by the number, to report a suspicious call to your mobile network.
-3. Report it to Report Fraud on 0300 123 2040.[4]
+3. Report it to Report Fraud on 0300 123 2040.[4](#source-4)
 
 It also fixed a mistake of mine. I had assumed report@phishing.gov.uk was somewhere to report police impersonation. It is for forwarding scam emails to the National Cyber Security Centre, and it is not a crime report.
 
@@ -94,7 +94,7 @@ The split worked. The bot did the legwork, and a person at GMP checked an intern
 
 ## Caller ID can’t be trusted either way
 
-A phone number tells you nothing, because spoofing breaks it in both directions. A real GMP number on your screen does not prove a call is genuine, and an unfamiliar one does not prove it is fake. GMP’s own advice says scammers use software to make any number appear on your caller ID.[5] Its recent warning describes the same thing happening with GMP numbers.[3]
+A phone number tells you nothing, because spoofing breaks it in both directions. A real GMP number on your screen does not prove a call is genuine, and an unfamiliar one does not prove it is fake. GMP’s own advice says scammers use software to make any number appear on your caller ID.[5](#source-5) Its recent warning describes the same thing happening with GMP numbers.[3](#source-3)
 
 The only reliable check is one you start yourself. Hang up, then call 101 or use the live chat on the official website. The genuine email told me to do exactly that, and looking back, that advice was a better signal than anything Grok Bot found online.
 
@@ -106,11 +106,11 @@ If you get a call, text or email claiming to be from the police:
 2. If your force offers live chat, use it. Go to the force’s website directly, not through a link in a message.
 3. Check a collar number through the force, not the caller. Give it to call handlers on 101 or through live chat.
 4. Report suspicious calls to your network. Text 7726 with “Call” followed by the number.
-5. Report fraud to Report Fraud on 0300 123 2040 or through its online reporting tool.[4] If you live in Scotland, report via 101.
+5. Report fraud to Report Fraud on 0300 123 2040 or through its online reporting tool.[4](#source-4) If you live in Scotland, report via 101.
 6. Forward scam emails to report@phishing.gov.uk. It goes to the NCSC and is not a crime report.
 7. Do not give bank details to someone who has phoned you.
 8. Do not move money because a caller tells you to, however official they sound.
-9. Never share passwords, recovery phrases or security codes. GMP says its officers will never ask for recovery phrases or security codes linked to cryptocurrency accounts.[3]
+9. Never share passwords, recovery phrases or security codes. GMP says its officers will never ask for recovery phrases or security codes linked to cryptocurrency accounts.[3](#source-3)
 
 ## Would I use Grok Bot for this again?
 
@@ -120,14 +120,11 @@ Have you had a call or email claiming to be from the police? And would you trust
 
 ## Sources
 
-[1] [Introducing Grok Bot, xAI](https://x.ai/news/introducing-grok-bot)
-
-[2] [Contact us, Greater Manchester Police](https://www.gmp.police.uk/contact/af/contact-us/)
-
-[3] [Police urge public to remain vigilant following several scam calls across GM, Greater Manchester Police](https://www.gmp.police.uk/news/greater-manchester/news/news/2026/october/police-urge-public-to-remain-vigilant-following-several-scam-calls-across-gm/)
-
-[4] [Report Fraud](https://www.reportfraud.police.uk/)
-
-[5] [Common scamming tools, Greater Manchester Police](https://www.gmp.police.uk/advice/advice-and-information/fa/fraud/personal-fraud/common-scamming-tools/)
-
-[6] [Post by Luke O’Regan on X](https://x.com/lukeoregan88/status/2111079484992397663)
+<ol>
+	<li id="source-1"><a href="https://x.ai/news/introducing-grok-bot" rel="noopener noreferrer" target="_blank">Introducing Grok Bot, xAI</a></li>
+	<li id="source-2"><a href="https://www.gmp.police.uk/contact/af/contact-us/" rel="noopener noreferrer" target="_blank">Contact us, Greater Manchester Police</a></li>
+	<li id="source-3"><a href="https://www.gmp.police.uk/news/greater-manchester/news/news/2026/october/police-urge-public-to-remain-vigilant-following-several-scam-calls-across-gm/" rel="noopener noreferrer" target="_blank">Police urge public to remain vigilant following several scam calls across GM, Greater Manchester Police</a></li>
+	<li id="source-4"><a href="https://www.reportfraud.police.uk/" rel="noopener noreferrer" target="_blank">Report Fraud</a></li>
+	<li id="source-5"><a href="https://www.gmp.police.uk/advice/advice-and-information/fa/fraud/personal-fraud/common-scamming-tools/" rel="noopener noreferrer" target="_blank">Common scamming tools, Greater Manchester Police</a></li>
+	<li id="source-6"><a href="https://x.com/lukeoregan88/status/2111079484992397663" rel="noopener noreferrer" target="_blank">Post by Luke O’Regan on X</a></li>
+</ol>

@@ -148,11 +148,13 @@ For another small, self-contained WordPress example, see [how to disable HTML in
 
 ## Sources
 
-1. <span id="source-1"></span>[WordPress comments article](https://lbor.dev/how-to-disable-html-in-wordpress-comments-without-a-plugin/)
-2. <span id="source-2"></span>[WordPress wp_insert_post reference](https://developer.wordpress.org/reference/functions/wp_insert_post/)
-3. <span id="source-3"></span>[WordPress wp_safe_remote_get reference](https://developer.wordpress.org/reference/functions/wp_safe_remote_get/)
-4. <span id="source-4"></span>[WordPress wp_kses_post reference](https://developer.wordpress.org/reference/functions/wp_kses_post/)
-5. <span id="source-5"></span>[WordPress Cron handbook](https://developer.wordpress.org/plugins/cron/)
-6. <span id="source-6"></span>[Scheduling WP-Cron events](https://developer.wordpress.org/plugins/cron/scheduling-wp-cron-events/)
-7. <span id="source-7"></span>[WordPress plugin best practices](https://developer.wordpress.org/plugins/plugin-basics/best-practices/)
-8. <span id="source-8"></span>[WordPress.org Import XML and RSS Feeds plugin](https://wordpress.org/plugins/import-xml-feed/)
+<ol>
+	<li id="source-1"><a href="https://lbor.dev/how-to-disable-html-in-wordpress-comments-without-a-plugin/" rel="noopener noreferrer" target="_blank">WordPress comments article</a></li>
+	<li id="source-2"><a href="https://developer.wordpress.org/reference/functions/wp_insert_post/" rel="noopener noreferrer" target="_blank">WordPress wp_insert_post reference</a></li>
+	<li id="source-3"><a href="https://developer.wordpress.org/reference/functions/wp_safe_remote_get/" rel="noopener noreferrer" target="_blank">WordPress wp_safe_remote_get reference</a></li>
+	<li id="source-4"><a href="https://developer.wordpress.org/reference/functions/wp_kses_post/" rel="noopener noreferrer" target="_blank">WordPress wp_kses_post reference</a></li>
+	<li id="source-5"><a href="https://developer.wordpress.org/plugins/cron/" rel="noopener noreferrer" target="_blank">WordPress Cron handbook</a></li>
+	<li id="source-6"><a href="https://developer.wordpress.org/plugins/cron/scheduling-wp-cron-events/" rel="noopener noreferrer" target="_blank">Scheduling WP-Cron events</a></li>
+	<li id="source-7"><a href="https://developer.wordpress.org/plugins/plugin-basics/best-practices/" rel="noopener noreferrer" target="_blank">WordPress plugin best practices</a></li>
+	<li id="source-8"><a href="https://wordpress.org/plugins/import-xml-feed/" rel="noopener noreferrer" target="_blank">WordPress.org Import XML and RSS Feeds plugin</a></li>
+</ol>

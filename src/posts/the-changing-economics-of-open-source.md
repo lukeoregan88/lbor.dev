@@ -14,9 +14,9 @@ published: true
 	import XPostEmbed from '$lib/components/XPostEmbed.svelte'
 </script>
 
-I came across a post from an open-source maintainer who had turned off external pull requests across their repositories. They would keep handling issues and maintaining the projects, but no longer accept outside patches for review.[4]
+I came across a post from an open-source maintainer who had turned off external pull requests across their repositories. They would keep handling issues and maintaining the projects, but no longer accept outside patches for review.[4](#source-4)
 
-In a follow-up, they described the time trade-off. They use AI to generate, verify and ship fixes instead of spending that time reviewing low-quality submissions. They said contribution quality had already been declining, and AI had accelerated the trend.[5]
+In a follow-up, they described the time trade-off. They use AI to generate, verify and ship fixes instead of spending that time reviewing low-quality submissions. They said contribution quality had already been declining, and AI had accelerated the trend.[5](#source-5)
 
 That made the current capability of AI feel concrete to me. The striking part was not just that AI can produce code, but that an experienced maintainer might find it faster to produce and verify a fix than to review an outside contribution. That is one person’s experience, not a verdict on every project—but it made me think about what happens when producing code gets cheaper while reviewing and maintaining it still costs human time.
 
@@ -30,15 +30,15 @@ From the contributor’s point of view, a pull request can feel like a gift: tim
 
 Those questions existed before generative AI. What has changed is the ease with which a plausible-looking patch can be produced and submitted. When creating a patch gets cheaper, the number of patches may rise faster than a maintainer’s capacity to assess them. That is not an argument that AI-generated contributions are inherently poor. It is a reminder that more output is not automatically more useful work.
 
-Research on open source maintenance has described maintainer time and labour as resources that can be depleted. A study based on interviews with ten maintainers across nine established projects found that project sustainability depends on supporting both maintainer and contributor labour—and that too little or too much contributor activity can create problems. More contributions can bring value, but they can also bring more technical work and community interaction to manage.[1]
+Research on open source maintenance has described maintainer time and labour as resources that can be depleted. A study based on interviews with ten maintainers across nine established projects found that project sustainability depends on supporting both maintainer and contributor labour—and that too little or too much contributor activity can create problems. More contributions can bring value, but they can also bring more technical work and community interaction to manage.[1](#source-1)
 
-The Linux Foundation’s interviews with 32 maintainers of critical open source projects found that the demands on maintainers’ time grow as projects become more complex. The report also notes that timely responses to pull requests affect the contributor experience. There is a tension here: maintainers need the freedom to protect their limited time, while projects need a way to welcome and develop the contributors who may share that work in future.[2]
+The Linux Foundation’s interviews with 32 maintainers of critical open source projects found that the demands on maintainers’ time grow as projects become more complex. The report also notes that timely responses to pull requests affect the contributor experience. There is a tension here: maintainers need the freedom to protect their limited time, while projects need a way to welcome and develop the contributors who may share that work in future.[2](#source-2)
 
 ## The hidden cost of “free” software
 
 Open source is often described in terms of the code: it is available to use, inspect, modify and share. But the ongoing economics are human. Someone has to decide which changes fit, deal with regressions, respond to users, prepare releases and keep dependencies current. Some maintainers are paid to do that work; many are not.
 
-In Tidelift’s 2023 survey of 339 maintainers, 60% described themselves as unpaid hobbyists, and 77% of unpaid respondents said they would prefer to be paid. The survey also found that maintainers who receive compensation tend to spend more time on open source work.[3] Those results are not a census of every project, but they underline a basic constraint: goodwill does not create unlimited hours.
+In Tidelift’s 2023 survey of 339 maintainers, 60% described themselves as unpaid hobbyists, and 77% of unpaid respondents said they would prefer to be paid. The survey also found that maintainers who receive compensation tend to spend more time on open source work.[3](#source-3) Those results are not a census of every project, but they underline a basic constraint: goodwill does not create unlimited hours.
 
 When the review queue grows, the cost is not only the minutes spent reading code. It can include context-switching, explaining decisions, checking edge cases, maintaining changes after merge, and the social work of declining a contribution respectfully. A maintainer who spends every available hour processing submissions has less time for planned work, documentation, security, or simply stepping away.
 
@@ -66,12 +66,10 @@ If you maintain or contribute to open source, what should change first: who can 
 
 ## Sources
 
-[1] [Sustaining Maintenance Labor for Healthy Open Source Software Projects through Human Infrastructure: A Maintainer Perspective](https://arxiv.org/abs/2408.06723)
-
-[2] [Open Source Maintainers: Exploring the people, practices, and constraints facing the world’s most critical open source software projects](https://project.linuxfoundation.org/hubfs/LF%20Research/Open%20Source%20Maintainers%202023%20-%20Report.pdf)
-
-[3] [The 2023 Tidelift State of the Open Source Maintainer Report](https://www.sonarsource.com/open-source-maintainer-survey-2023.pdf)
-
-[4] [Original post on X](https://x.com/sindresorhus/status/2105693826690298314)
-
-[5] [Follow-up on X](https://x.com/sindresorhus/status/2105720399266984369)
+<ol>
+	<li id="source-1"><a href="https://arxiv.org/abs/2408.06723" rel="noopener noreferrer" target="_blank">Sustaining Maintenance Labor for Healthy Open Source Software Projects through Human Infrastructure: A Maintainer Perspective</a></li>
+	<li id="source-2"><a href="https://project.linuxfoundation.org/hubfs/LF%20Research/Open%20Source%20Maintainers%202023%20-%20Report.pdf" rel="noopener noreferrer" target="_blank">Open Source Maintainers: Exploring the people, practices, and constraints facing the world’s most critical open source software projects</a></li>
+	<li id="source-3"><a href="https://www.sonarsource.com/open-source-maintainer-survey-2023.pdf" rel="noopener noreferrer" target="_blank">The 2023 Tidelift State of the Open Source Maintainer Report</a></li>
+	<li id="source-4"><a href="https://x.com/sindresorhus/status/2105693826690298314" rel="noopener noreferrer" target="_blank">Original post on X</a></li>
+	<li id="source-5"><a href="https://x.com/sindresorhus/status/2105720399266984369" rel="noopener noreferrer" target="_blank">Follow-up on X</a></li>
+</ol>

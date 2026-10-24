@@ -17,7 +17,7 @@ A call from what looked like a Greater Manchester Police (GMP) number turned out
 
 ## What happened
 
-A woman calling herself “Emily from Manchester Police” rang me from a number that belonged to GMP. It sounded wrong, so I hung up. GMP has warned that scammers are phoning people from spoofed GMP numbers.[1] I posted about it on X at the time:[3]
+A woman calling herself “Emily from Manchester Police” rang me from a number that belonged to GMP. It sounded wrong, so I hung up. GMP has warned that scammers are phoning people from spoofed GMP numbers.[1](#source-1) I posted about it on X at the time:[3](#source-3)
 
 <XPostEmbed
 	lines={[
@@ -53,12 +53,12 @@ Grok Bot could not find the email sender’s address online, so it told me to be
 3. Text 7726 with “Call” followed by the number to report it to your network.
 4. Report it to Report Fraud on 0300 123 2040.
 
-Grok Bot is in beta, and I pay for my own subscription.[2]
+Grok Bot is in beta, and I pay for my own subscription.[2](#source-2)
 
 ## Sources
 
-[1] [Police urge public to remain vigilant following several scam calls across GM, Greater Manchester Police](https://www.gmp.police.uk/news/greater-manchester/news/news/2026/october/police-urge-public-to-remain-vigilant-following-several-scam-calls-across-gm/)
-
-[2] [Introducing Grok Bot, xAI](https://x.ai/news/introducing-grok-bot)
-
-[3] [Post by Luke O’Regan on X](https://x.com/lukeoregan88/status/2111079484992397663)
+<ol>
+	<li id="source-1"><a href="https://www.gmp.police.uk/news/greater-manchester/news/news/2026/october/police-urge-public-to-remain-vigilant-following-several-scam-calls-across-gm/" rel="noopener noreferrer" target="_blank">Police urge public to remain vigilant following several scam calls across GM, Greater Manchester Police</a></li>
+	<li id="source-2"><a href="https://x.ai/news/introducing-grok-bot" rel="noopener noreferrer" target="_blank">Introducing Grok Bot, xAI</a></li>
+	<li id="source-3"><a href="https://x.com/lukeoregan88/status/2111079484992397663" rel="noopener noreferrer" target="_blank">Post by Luke O’Regan on X</a></li>
+</ol>
