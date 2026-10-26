@@ -1,7 +1,7 @@
 ---
 title: 'I Vibe-Coded a Whole Website With AI Agents: What Worked and What Didn’t'
 seoTitle: 'I Vibe-Coded a Whole Website With AI Agents | LBOR'
-description: 'My first vibe-coded website: AI agents rebuilt a WordPress portfolio in a few hours and it scores 100 on Lighthouse. What went wrong.'
+description: 'My first vibe-coded website: Hermes Agent rebuilt a WordPress portfolio in a few hours and it scores 100 on Lighthouse. What went wrong.'
 date: '2026-10-26'
 categories:
   - ai-agents
@@ -10,7 +10,7 @@ categories:
 published: false
 ---
 
-I have used AI for years, but always with my hands on the wheel. My usual workflow is [Cursor](https://cursor.com), where I write, the model suggests and I read every change.[1](#source-1) For the Szandra Tóth Makeup website I did something different. I set up the repository in Cursor, then handed the build to AI agents and mostly stayed out of their way. It was the first site I had properly vibe-coded.
+I have used AI for years, but always with my hands on the wheel. My usual workflow is [Cursor](https://cursor.com), where I write, the model suggests and I read every change.[1](#source-1) For the Szandra Tóth Makeup website I did something different. I set up the repository in Cursor, then handed the build to [Hermes Agent](https://hermes-agent.nousresearch.com/docs),[11](#source-11) which did the real building while I mostly stayed out of its way. It was the first site I had properly vibe-coded.
 
 Strictly, vibe coding means describing what you want in plain language and letting the AI produce the code.[2](#source-2) I did read the results, so I was never fully hands-off, but I wrote almost none of the code myself. The speed was the real surprise: a few hours from the first plan to a site with every page working, and a Lighthouse performance score of 100 once it was finished. The result was better than I expected. It also went wrong in enough places that I would not have trusted it alone.
 
@@ -18,7 +18,7 @@ Strictly, vibe coding means describing what you want in plain language and letti
 
 [Szandra Tóth Makeup](https://szandratothmakeup.co.uk) is a portfolio site for a makeup artist. It ran on WordPress at [Hostinger](/hostinger-review-2026/), and I wanted a faster static SvelteKit site that looked like the original. Every page is prerendered at build time,[3](#source-3) and the site runs on Cloudflare Workers.[4](#source-4) The old WordPress install stays in place as a rollback.
 
-I say “I built” because I started the repository and wrote the brief. The agents wrote the code. That is the odd part of working this way: the site exists because of me, and I barely touched it.
+I say “I built” because I started the repository and wrote the brief. Hermes Agent wrote the code. That is the odd part of working this way: the site exists because of me, and I barely touched it.
 
 <figure style="margin-bottom: var(--size-7)">
 	<img
@@ -54,7 +54,7 @@ This was a personal project, with no client quote and no deadline, which made it
 
 ## How the build worked
 
-I ran the work through Hermes, the agent setup on my home server. Each job became a card with a clear goal: page transitions, an intro animation, the Cloudflare adapter, image handling. An engineering agent picked up a card, did the work and handed it back for me to check. The coding models were Grok[5](#source-5) plus whatever Hermes chose on the server.
+Cursor got the project started, but Hermes Agent was the main builder. It runs on my home server. I gave it each job as a card with a clear goal: page transitions, an intro animation, the Cloudflare adapter, image handling. Its engineering agent picked up a card, did the work and handed it back for me to check. The coding models were Grok[5](#source-5) plus whatever Hermes chose on the server.
 
 That is the change from my Cursor days. In Cursor I am in the loop on every edit. Here I wrote the brief, read the result and decided whether it was good enough, which felt closer to managing a contractor than pair programming.
 
@@ -111,7 +111,7 @@ Since I was already working with agents, I added two things for AI crawlers. The
 
 Yes. Cloning an existing site into a modern static build is a well-defined job, and the agents handled it quickly and followed the original closely. It took me far less time than writing it by hand. Having every page working in a few hours is something that would not have happened in the past.
 
-The parts that needed me were the look and feel, the build-time trade-off and the final check on the photos. Cursor stays for work where I want to understand every line. For a well-scoped job with a clear target, I will brief the agents again and read what comes back.
+The parts that needed me were the look and feel, the build-time trade-off and the final check on the photos. Cursor stays for work where I want to understand every line. For a well-scoped job with a clear target, I will brief Hermes Agent again and read what comes back.
 
 ## Sources
 
@@ -126,4 +126,5 @@ The parts that needed me were the look and feel, the build-time trade-off and th
 	<li id="source-8"><a href="https://blog.cloudflare.com/markdown-for-agents/" rel="noopener noreferrer" target="_blank">Introducing Markdown for Agents, Cloudflare Blog</a></li>
 	<li id="source-9"><a href="https://contentsignals.org/" rel="noopener noreferrer" target="_blank">Content Signals, contentsignals.org</a></li>
 	<li id="source-10"><a href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring" rel="noopener noreferrer" target="_blank">Lighthouse agentic browsing scoring, Chrome for Developers</a></li>
+	<li id="source-11"><a href="https://hermes-agent.nousresearch.com/docs" rel="noopener noreferrer" target="_blank">Hermes Agent documentation, Nous Research</a></li>
 </ol>
