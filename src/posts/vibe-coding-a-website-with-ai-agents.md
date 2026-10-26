@@ -7,7 +7,7 @@ categories:
   - ai-agents
   - sveltekit
   - software-development
-published: false
+published: true
 ---
 
 I have used AI for years, but always with my hands on the wheel. My usual workflow is [Cursor](https://cursor.com), where I write, the model suggests and I read every change.[1](#source-1) For the Szandra Tóth Makeup website I did something different. I set up the repository in Cursor, then handed the build to [Hermes Agent](https://hermes-agent.nousresearch.com/docs),[11](#source-11) which did the real building while I mostly stayed out of its way. It was the first site I had properly vibe-coded.
