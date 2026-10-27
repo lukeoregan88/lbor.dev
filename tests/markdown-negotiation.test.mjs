@@ -84,3 +84,26 @@ test(
 		assert.doesNotMatch(md, /<script|<nav|<footer/)
 	}
 )
+
+test('explicit .md URLs map to the Markdown twin', async () => {
+	const { markdownTwinFor } = await import('../worker/negotiate.js')
+	assert.equal(markdownTwinFor('/post.md'), '/post/index.md')
+	assert.equal(markdownTwinFor('/writings.md'), '/writings/index.md')
+	assert.equal(markdownTwinFor('/index.md'), '/index.md')
+	assert.equal(markdownTwinFor('/post/index.md'), null)
+	assert.equal(markdownTwinFor('/post/'), null)
+	assert.equal(markdownTwinFor('/a/../b.md'), null)
+	assert.equal(markdownTwinFor('/logo.svg'), null)
+})
+
+test('GET /post.md serves Markdown with canonical Link and noindex', async () => {
+	const worker = createWorker(app)
+	const res = await worker.fetch(new Request('https://lbor.dev/post.md'), env, {})
+	assert.equal(res.status, 200)
+	assert.match(res.headers.get('content-type'), /^text\/markdown/)
+	assert.equal(res.headers.get('x-robots-tag'), 'noindex')
+	assert.equal(res.headers.get('link'), '<https://lbor.dev/post/>; rel="canonical"')
+	assert.equal(await res.text(), '# Post\n')
+	const missing = await worker.fetch(new Request('https://lbor.dev/nope.md'), env, {})
+	assert.match(missing.headers.get('content-type'), /^text\/html/)
+})

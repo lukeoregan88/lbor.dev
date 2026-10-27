@@ -10,6 +10,10 @@
 	let { jsonLd = [], ...seoProps }: Props = $props()
 
 	const seo = $derived(getSEOTags(seoProps))
+	// /post/ -> /post.md, / -> /index.md
+	const markdownUrl = $derived(
+		seo.canonicalUrl.replace(/\/$/, '').replace(/^(https?:\/\/[^/]+)$/, '$1/index') + '.md'
+	)
 </script>
 
 <svelte:head>
@@ -44,6 +48,7 @@
 	<meta name="twitter:image" content={seo.twitter.image} />
 
 	<link rel="canonical" href={seo.canonicalUrl} />
+	<link rel="alternate" type="text/markdown" href={markdownUrl} />
 
 	{#each jsonLd as schema (JSON.stringify(schema))}
 		<!-- Script-breaking characters are escaped by getJsonLdScript; this is not arbitrary HTML. -->

@@ -27,6 +27,8 @@ export function getLlmsText(posts: Post[]) {
 		'',
 		'This is an experimental navigation aid to public pages. It does not grant crawler or training permissions or guarantee search rankings or AI citations.',
 		'',
+		`Every page also has a Markdown version: add .md to the page URL (for example ${config.productionUrl}/writings.md), or ask for text/markdown with an Accept header.`,
+		'',
 		'## Site',
 		'',
 		`- [Home and author biography](${config.productionUrl}/): Luke O'Regan's professional introduction.`,

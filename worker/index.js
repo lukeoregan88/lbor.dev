@@ -1,4 +1,4 @@
-import { estimateTokens, markdownPathFor, prefersMarkdown } from './negotiate.js'
+import { estimateTokens, markdownPathFor, markdownTwinFor, prefersMarkdown } from './negotiate.js'
 
 // Wraps the SvelteKit Cloudflare worker (`app`) so `Accept: text/markdown` is answered with
 // the Markdown twin generated at build time (scripts/build-markdown.mjs). Everything else,
@@ -9,6 +9,24 @@ export function createWorker(app) {
 			const url = new URL(request.url)
 			const isRead = request.method === 'GET' || request.method === 'HEAD'
 			const mdPath = isRead ? markdownPathFor(url.pathname) : null
+
+			// Explicit /<slug>.md URL: always Markdown, never indexed as a duplicate of the page.
+			const twinPath = isRead ? markdownTwinFor(url.pathname) : null
+			if (twinPath) {
+				const asset = await env.ASSETS.fetch(new Request(new URL(twinPath, url), { method: 'GET' }))
+				if (asset.ok) {
+					const body = await asset.text()
+					const canonical = twinPath.replace(/index\.md$/, '')
+					const headers = new Headers(asset.headers)
+					headers.set('content-type', 'text/markdown; charset=utf-8')
+					headers.set('x-robots-tag', 'noindex')
+					headers.set('link', `<${new URL(canonical, url).href}>; rel="canonical"`)
+					headers.set('x-markdown-tokens', String(estimateTokens(body)))
+					headers.delete('content-length')
+					headers.delete('etag')
+					return new Response(request.method === 'HEAD' ? null : body, { status: 200, headers })
+				}
+			}
 
 			if (mdPath && prefersMarkdown(request.headers.get('accept'))) {
 				const asset = await env.ASSETS.fetch(new Request(new URL(mdPath, url), { method: 'GET' }))

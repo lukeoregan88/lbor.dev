@@ -26,6 +26,15 @@ export function markdownPathFor(pathname) {
 	return `${pathname}index.md`
 }
 
+// Explicit Markdown URLs: /<path>.md serves the twin of /<path>/ ('/index.md' is the home page).
+// Paths that already name a twin (/post/index.md) and dot-segments are not mapped.
+export function markdownTwinFor(pathname) {
+	if (pathname === '/index.md') return '/index.md'
+	const match = /^\/([a-z0-9]+(?:-[a-z0-9]+)*(?:\/[a-z0-9]+(?:-[a-z0-9]+)*)*)\.md$/.exec(pathname)
+	if (!match || match[1] === 'index' || match[1].endsWith('/index')) return null
+	return `/${match[1]}/index.md`
+}
+
 // Rough token estimate (about four characters per token) for the x-markdown-tokens header.
 export function estimateTokens(text) {
 	return Math.ceil(text.length / 4)
